@@ -1,32 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, useGLTF } from '@react-three/drei';
+import { useEffect } from 'react';
+import Hero from './sections/Hero';
 
-function App() {
-  const [counter, setCounter] = useState(0)
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+// import SceneInit from './SceneInit';
+
+const App = () => {
+    // useEffect(() => {
+    //     const test = new SceneInit('myThreeJsCanvas');
+    //     test.initialize();
+    //     test.animate();
+
+    //     let loadedModel;
+    //     const gltfLoader = new GLTFLoader();
+    //     gltfLoader.load('/src/react_logo_circle/scene.gltf', (gltfScene) => {
+    //         loadedModel = gltfScene;
+    //         test.scene.add(gltfScene.scene);
+    //     });
+    //     const animate = () => {
+    //         if (loadedModel) {
+    //             loadedModel.scene.rotation.x += 0.01;
+    //             loadedModel.scene.rotation.y += 0.01;
+    //             loadedModel.scene.rotation.z += 0.01;
+    //         }
+    //         requestAnimationFrame(animate);
+    //     };
+    //     animate();
+    // }, []);
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <button onClick={() => (setCounter(counter + 1))}>Counter is {counter} </button>
-      <div className="card">
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Hero />
+  );
 }
 
 export default App
