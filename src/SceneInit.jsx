@@ -27,14 +27,6 @@ export default class SceneInit {
 
   initialize() {
     this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(
-      this.fov,
-      window.innerWidth / window.innerHeight,
-      1,
-      1000
-    );
-    this.camera.position.y = 9;
-    this.camera.position.z = 36;
 
     // NOTE: Specify a canvas which is already created in the HTML.
     const canvas = document.getElementById(this.canvasId);
@@ -43,7 +35,20 @@ export default class SceneInit {
       // NOTE: Anti-aliasing smooths out the edges.
       antialias: true,
     });
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+
+    this.camera = new THREE.PerspectiveCamera(
+      this.fov,
+      width / height,
+      1,
+      1000
+    );
+    this.camera.position.y = 3;
+    this.camera.position.z = 8;
+
+    this.renderer.setSize(width, height);
     // this.renderer.shadowMap.enabled = true;
     // Pas besoin d'ajouter le domElement car on utilise le canvas existant
     // document.body.appendChild(this.renderer.domElement);
@@ -94,8 +99,10 @@ export default class SceneInit {
   }
 
   onWindowResize() {
-    this.camera.aspect = window.innerWidth / window.innerHeight;
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(width, height);
   }
 }
