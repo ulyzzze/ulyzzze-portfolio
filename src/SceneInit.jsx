@@ -55,8 +55,8 @@ export default class SceneInit {
 
     this.clock = new THREE.Clock();
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-    this.stats = Stats();
-    document.body.appendChild(this.stats.dom);
+    // this.stats = Stats();
+    // document.body.appendChild(this.stats.dom);
 
     // ambient light which is for the whole scene
     this.ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -88,7 +88,7 @@ export default class SceneInit {
     // requestAnimationFrame(this.animate.bind(this));
     window.requestAnimationFrame(this.animate.bind(this));
     this.render();
-    this.stats.update();
+    // this.stats.update();
     this.controls.update();
   }
 
@@ -99,6 +99,9 @@ export default class SceneInit {
   }
 
   onWindowResize() {
+    const canvas = document.getElementById(this.canvasId);
+    if (!canvas) return;
+    
     const width = canvas.clientWidth;
     const height = canvas.clientHeight;
     this.camera.aspect = width / height;
