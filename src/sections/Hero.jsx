@@ -1,46 +1,48 @@
 import React, { useEffect } from 'react'
-import { gsap } from 'gsap'
+// import { gsap } from 'gsap'
 import { ShimmerButton } from "../components/magicui/rainbow-button";
 
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import SceneInit from '../SceneInit';
+import Spline from '@splinetool/react-spline';
+
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+// import SceneInit from '../SceneInit';
 
 const Hero = () => {
-   useEffect(() => {
-        // Vérifier que le canvas existe avant d'initialiser
-        const canvas = document.getElementById('myThreeJsCanvas');
-        if (!canvas) {
-            console.error('Canvas non trouvé');
-            return;
-        }
+  //  useEffect(() => {
+  //       // Vérifier que le canvas existe avant d'initialiser
+  //       const canvas = document.getElementById('myThreeJsCanvas');
+  //       if (!canvas) {
+  //           console.error('Canvas non trouvé');
+  //           return;
+  //       }
 
-        const test = new SceneInit('myThreeJsCanvas');
-        test.initialize();
-        test.animate();
+  //       const test = new SceneInit('myThreeJsCanvas');
+  //       test.initialize();
+  //       test.animate();
 
-        let loadedModel;
-        const gltfLoader = new GLTFLoader();
-        gltfLoader.load('/models/space_boi/scene.gltf', (gltfScene) => {
-            console.log('Gltf model succesfully loaded:', gltfScene);
-            loadedModel = gltfScene;
-            loadedModel.scene.scale.set(0.5, 0.5, 0.5);
-            loadedModel.scene.position.y = -1; // Essayez de le centrer verticalement
-            loadedModel.scene.position.x = 0; // Essayez de le centrer horizontalement
-            loadedModel.scene.position.z = -0.3; // Assurez-vous qu'il est à une bonne profondeur
-            test.scene.add(gltfScene.scene);
-        }, undefined, (error) => {
-            console.error('Error when loading the gltf model:', error);
-        });
-        const animate = () => {
-            if (loadedModel) {
-                // loadedModel.scene.rotation.x += 0.01;
-                loadedModel.scene.rotation.y -= 0.001;
-                // loadedModel.scene.rotation.z += 0.01;
-            }
-            requestAnimationFrame(animate);
-        };
-        animate();
-    }, []);
+  //       let loadedModel;
+  //       const gltfLoader = new GLTFLoader();
+  //       gltfLoader.load('/models/space_boi/scene.gltf', (gltfScene) => {
+  //           console.log('Gltf model succesfully loaded:', gltfScene);
+  //           loadedModel = gltfScene;
+  //           loadedModel.scene.scale.set(0.5, 0.5, 0.5);
+  //           loadedModel.scene.position.y = -1; // Essayez de le centrer verticalement
+  //           loadedModel.scene.position.x = 0; // Essayez de le centrer horizontalement
+  //           loadedModel.scene.position.z = -0.3; // Assurez-vous qu'il est à une bonne profondeur
+  //           test.scene.add(gltfScene.scene);
+  //       }, undefined, (error) => {
+  //           console.error('Error when loading the gltf model:', error);
+  //       });
+  //       const animate = () => {
+  //           if (loadedModel) {
+  //               // loadedModel.scene.rotation.x += 0.01;
+  //               loadedModel.scene.rotation.y -= 0.001;
+  //               // loadedModel.scene.rotation.z += 0.01;
+  //           }
+  //           requestAnimationFrame(animate);
+  //       };
+  //       animate();
+  //   }, []);
 
   return (
     <section id='hero' className='relative overflow-hidden'>
@@ -60,16 +62,10 @@ const Hero = () => {
                 </span>
               </ShimmerButton>
             </div>
-            <div className='h-[35rem] w-[45rem] mt-[-10rem]'> {/* Ex: w-96 (24rem) et h-96 (24rem) */}
-              <canvas id="myThreeJsCanvas" className='w-full h-full' /> {/* Le canvas prendra 100% de la largeur et hauteur de son parent */}
-            </div>
           </div>
-          
+        <Spline scene="https://prod.spline.design/csSoCj50TpwjL-zE/scene.splinecode" />
         </header>
-      
-      
     </section>
   )
 }
-
 export default Hero
