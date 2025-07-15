@@ -66,7 +66,7 @@ const Hero = () => {
           <div className='flex flex-col lg:flex-row pt-[10rem] sm:pt-[15rem] lg:pt-[17rem] px-4 sm:px-8 lg:pl-[5rem] lg:pr-[5rem] justify-between items-center lg:items-start gap-8 lg:gap-0'>
             <div className='flex flex-col text-center lg:text-left'>
               <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl pb-7'>Bienvenue.</h1>
-              <p className='text-sm sm:text-base md:text-lg max-w-2xl'>Mon nom est Ulysse COUCHOUD, un jeune développeur lyonnais passioné d'informatique. Étudiant à Epitech Lyon, je suis passioné par le développement
+              <p className='text-lg max-w-2xl'>Mon nom est Ulysse COUCHOUD, un jeune développeur lyonnais passioné d'informatique. Étudiant à Epitech Lyon, je suis passioné par le développement
                 web ainsi que l'intelligence artificiel.
               </p>
               <ShimmerButton className="shadow-4xl w-fit mt-10 self-center lg:self-start">
