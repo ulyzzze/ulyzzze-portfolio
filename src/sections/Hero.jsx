@@ -24,22 +24,37 @@ const Hero = () => {
             console.log('Gltf model succesfully loaded:', gltfScene);
             loadedModel = gltfScene;
             loadedModel.scene.scale.set(0.5, 0.5, 0.5);
-            loadedModel.scene.position.y = -1; // Essayez de le centrer verticalement
-            loadedModel.scene.position.x = 0; // Essayez de le centrer horizontalement
-            loadedModel.scene.position.z = -0.3; // Assurez-vous qu'il est à une bonne profondeur
+            loadedModel.scene.position.y = -1;
+            loadedModel.scene.position.x = 0;
+            loadedModel.scene.position.z = -0.3;
             test.scene.add(gltfScene.scene);
         }, undefined, (error) => {
             console.error('Error when loading the gltf model:', error);
         });
+
         const animate = () => {
             if (loadedModel) {
-                // loadedModel.scene.rotation.x += 0.01;
                 loadedModel.scene.rotation.y -= 0.001;
-                // loadedModel.scene.rotation.z += 0.01;
             }
             requestAnimationFrame(animate);
         };
         animate();
+
+        // Fonction pour redimensionner le canvas
+        const handleResize = () => {
+            // Délai pour permettre au DOM de se mettre à jour
+            setTimeout(() => {
+                test.onWindowResize();
+            }, 100);
+        };
+
+        // Écouter les changements de taille de fenêtre
+        window.addEventListener('resize', handleResize);
+
+        // Nettoyage lors du démontage du composant
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
   return (
@@ -48,20 +63,20 @@ const Hero = () => {
         <img src='/images/bg.png' alt="background" />
       </div>
         <header>
-          <div className='flex flex-col md:flex-row pt-[20rem] pl-[5rem] justify-between pr-[5rem]'>
-            <div className='flex flex-col'>
+          <div className='flex flex-col lg:flex-row pt-[10rem] sm:pt-[15rem] lg:pt-[20rem] px-4 sm:px-8 lg:pl-[5rem] lg:pr-[5rem] justify-between items-center lg:items-start gap-8 lg:gap-0'>
+            <div className='flex flex-col text-center lg:text-left'>
               <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl pb-7'>Bienvenue.</h1>
               <p className='text-sm sm:text-base md:text-lg max-w-2xl'>Mon nom est Ulysse COUCHOUD, un jeune développeur lyonnais passioné d'informatique. Étudiant à Epitech Lyon, je suis passioné par le développement
                 web ainsi que l'intelligence artificiel.
               </p>
-              <ShimmerButton className="shadow-4xl w-fit mt-10">
+              <ShimmerButton className="shadow-4xl w-fit mt-10 self-center lg:self-start">
                 <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                   Accéder a mes projets
                 </span>
               </ShimmerButton>
             </div>
-            <div className='h-[35rem] w-[45rem] mt-[-10rem]'> {/* Ex: w-96 (24rem) et h-96 (24rem) */}
-              <canvas id="myThreeJsCanvas" className='w-full h-full' /> {/* Le canvas prendra 100% de la largeur et hauteur de son parent */}
+            <div className='w-full max-w-2xl lg:w-[45rem] h-[20rem] sm:h-[25rem] lg:h-[35rem] mt-0 sm:mt-[-5rem] lg:mt-[-10rem]'>
+              <canvas id="myThreeJsCanvas" className='w-full h-full' />
             </div>
           </div>
           
