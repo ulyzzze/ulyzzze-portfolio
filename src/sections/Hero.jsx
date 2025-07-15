@@ -58,12 +58,12 @@ const Hero = () => {
     }, []);
 
   return (
-    <section id='hero' className='relative overflow-hidden'>
+    <section id='hero' className='relative overflow-hidden '>
       <div className='absolute top-0 left-0 z-10'>
         <img src='/images/bg.png' alt="background" />
       </div>
         <header>
-          <div className='flex flex-col lg:flex-row pt-[10rem] sm:pt-[15rem] lg:pt-[20rem] px-4 sm:px-8 lg:pl-[5rem] lg:pr-[5rem] justify-between items-center lg:items-start gap-8 lg:gap-0'>
+          <div className='flex flex-col lg:flex-row pt-[10rem] sm:pt-[15rem] lg:pt-[17rem] px-4 sm:px-8 lg:pl-[5rem] lg:pr-[5rem] justify-between items-center lg:items-start gap-8 lg:gap-0'>
             <div className='flex flex-col text-center lg:text-left'>
               <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl pb-7'>Bienvenue.</h1>
               <p className='text-sm sm:text-base md:text-lg max-w-2xl'>Mon nom est Ulysse COUCHOUD, un jeune développeur lyonnais passioné d'informatique. Étudiant à Epitech Lyon, je suis passioné par le développement
@@ -79,7 +79,7 @@ const Hero = () => {
               <canvas id="myThreeJsCanvas" className='w-full h-full' />
             </div>
           </div>
-          
+          <div className='pb-[100rem]'></div>
         </header>
       
       
