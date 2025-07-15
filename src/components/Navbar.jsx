@@ -26,13 +26,13 @@ const Navbar = () => {
   return (
     <div className='px-4 sm:px-6 lg:px-[5rem] fixed bg-black overflow-hidden top-0 w-[100%] z-1'>
       <div className={`flex flex-row justify-between items-center transition-all duration-300 ${scrolled ? 'py-[1rem]' : 'py-[3rem]'}`}>
-            <div className='text-2xl font-medium font-[roboto] tracking-wide'>Ulysse COUCHOUD</div>
-            <div className='flex gap-10'>
-                <a className='hover:text-purple-300 transition-colors cursor-pointer'>Projet</a>
-                <a className='hover:text-gray-300 transition-colors cursor-pointer'>Expérience</a>
-                <a className='hover:text-gray-300 transition-colors cursor-pointer'>Compétences</a>
-            </div>
-            <div>Contact</div>
+        <div className='text-2xl font-medium font-[roboto] tracking-wide'>Ulysse COUCHOUD</div>
+        <div className='md:flex gap-10 hidden'>
+            <a className='hover:text-purple-300 transition-colors cursor-pointer'>Projet</a>
+            <a className='hover:text-gray-300 transition-colors cursor-pointer'>Expérience</a>
+            <a className='hover:text-gray-300 transition-colors cursor-pointer'>Compétences</a>
+        </div>
+        <button className="btn btn-outline hover:bg-white hover:text-black">Me contacter</button>
       </div>
     </div>
   )
