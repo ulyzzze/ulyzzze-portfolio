@@ -79,7 +79,7 @@ const Hero = () => {
               <canvas id="myThreeJsCanvas" className='w-full h-full' />
             </div>
           </div>
-          <div className='pb-[100rem]'></div>
+          <div className='pb-[15rem]'></div>
         </header>
       
       
