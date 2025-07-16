@@ -42,6 +42,16 @@ const Experience = () => {
                     </div>
                 </div>
             </div>
+            <div className='flex flex-col gap-4'>
+                <h1 className='text-center font-bold text-2xl pb-[1rem]'>Développeur Power Platform</h1>
+                <p className='text-lg'>Août 2024 - Décembre 2024</p>
+                <p className='font-thin italic'>Responsabilités</p>
+                <ul className='list-disc [&>li]:mb-3 text-lg'>
+                    <li>Conception et développement d’une application métier sous Power Apps</li>
+                    <li>Intégration de flux automatisés avec Power Automate</li>
+                    <li>Initialisation de bases de données pour création de tableaux de bords Power BI</li>
+                </ul>
+            </div>
         </div>
     </div>
   )
