@@ -3,10 +3,10 @@ import React from 'react'
 const Experience = () => {
   return (
     <div className='flex justify-center flex-col items-center pb-[10rem]'>
-        <a className='font-thin text-2xl pb-7'>Ce que j'ai pu effectuer jusqu'a présent</a>
-        <h1 className='text-6xl font-bold pb-[5rem]'>Expérience Professionnel.</h1>
-        <div className='flex flex-row justify-between gap-10'>
-            <div className='bg-black-50 w-[40rem] p-10 rounded-xl'>
+        <a className='font-thin md:text-2xl text-lg pb-7'>Ce que j'ai pu effectuer jusqu'a présent</a>
+        <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold pb-[5rem] text-center'>Expérience Professionnel.</h1>
+        <div className='flex lg:flex-row flex-col justify-between gap-10 px-10'>
+            <div className='bg-black-50 md:w-[40rem] p-10 rounded-xl'>
                 <div className='flex flex-row items-center gap-5 pb-[1rem]'>
                     <div className="avatar">
                         <div className="w-12 rounded-full">
@@ -25,7 +25,7 @@ const Experience = () => {
                 <img src='./images/fret_sncf.png' className='w-[11rem]'/>
             </div>
             <div className='flex flex-col justify-between items-center relative'>
-                <div className='w-1 bg-linear-to-b from-purple-500 to-yellow-500 h-full absolute left-1/2 transform -translate-x-1/2'></div>
+                <div className='w-[0.2rem] bg-linear-to-b from-purple-500 to-yellow-500 h-full absolute left-1/2 transform -translate-x-1/2'></div>
                 <div className="avatar">
                     <div className="w-16 rounded-full">
                         <img src="./images/power_apps.png" className='bg-gray-600 p-2 border-4 border-gray-500 rounded-full'/>
