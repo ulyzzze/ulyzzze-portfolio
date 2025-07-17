@@ -3,9 +3,9 @@ import React from 'react'
 const Experience = () => {
   return (
     <div className='flex justify-center flex-col items-center pb-[10rem]'>
-        <a className='font-thin md:text-2xl text-lg pb-7'>Ce que j'ai pu effectuer jusqu'a présent</a>
+        <a className='font-thin md:text-2xl text-lg pb-7 text-center'>Ce que j'ai pu effectuer jusqu'a présent</a>
         <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold pb-[5rem] text-center'>Expérience Professionnel.</h1>
-        <div className='flex lg:flex-row flex-col justify-between gap-10 px-10'>
+        <div className='flex lg:flex-row flex-col justify-between gap-10 px-10 items-center lg:items-stretch'>
             <div className='bg-black-50 md:w-[40rem] p-10 rounded-xl'>
                 <div className='flex flex-row items-center gap-5 pb-[1rem]'>
                     <div className="avatar">
@@ -24,7 +24,7 @@ const Experience = () => {
                 </p>
                 <img src='./images/fret_sncf.png' className='w-[11rem]'/>
             </div>
-            <div className='flex flex-col justify-between items-center relative'>
+            <div className='lg:flex flex-col justify-between items-center relative hidden'>
                 <div className='w-[0.2rem] bg-linear-to-b from-purple-500 to-yellow-500 h-full absolute left-1/2 transform -translate-x-1/2'></div>
                 <div className="avatar">
                     <div className="w-16 rounded-full">
@@ -44,12 +44,14 @@ const Experience = () => {
             </div>
             <div className='flex flex-col gap-4'>
                 <h1 className='text-center font-bold text-2xl pb-[1rem]'>Développeur Power Platform</h1>
-                <p className='text-lg'>Août 2024 - Décembre 2024</p>
+                <p className='text-lg'>📅 Août 2024 - Décembre 2024</p>
                 <p className='font-thin italic'>Responsabilités</p>
                 <ul className='list-disc [&>li]:mb-3 text-lg'>
-                    <li>Conception et développement d’une application métier sous Power Apps</li>
-                    <li>Intégration de flux automatisés avec Power Automate</li>
-                    <li>Initialisation de bases de données pour création de tableaux de bords Power BI</li>
+                    <li>Conception et développement d’une application métier sur Power Apps avec interface optimisée.</li>
+                    <li>Création et structuration de bases de données SharePoint liées à l’application.</li>
+                    <li>Optimisation de code Power Fx déjà existant pour améliorer les performances et la maintenabilité.</li>
+                    <li>Développement de flux Power Automate pour automatiser certains processus.</li>
+                    <li>Conception de tableaux de bord Power BI à partir de données Excel et SharePoint.</li>
                 </ul>
             </div>
         </div>
