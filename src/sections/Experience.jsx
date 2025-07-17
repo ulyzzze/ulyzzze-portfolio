@@ -2,7 +2,7 @@ import React from 'react'
 
 const Experience = () => {
   return (
-    <div className='flex justify-center flex-col items-center pb-[10rem]'>
+    <div className='flex justify-center flex-col items-center pb-[10rem]' id='experience'>
         <a className='font-thin md:text-2xl text-lg pb-7 text-center'>Ce que j'ai pu effectuer jusqu'a présent</a>
         <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold pb-[5rem] text-center'>Expérience Professionnel.</h1>
         <div className='flex lg:flex-row flex-col justify-between gap-10 px-10 items-center lg:items-stretch'>
@@ -18,8 +18,8 @@ const Experience = () => {
                         <p className='text-thin text-gray-400'>Dirigeant Atelier Production des Palomas SUD</p>
                     </div>
                 </div>
-                <p className='pb-[1rem]'>"Excellent stage en entreprise. A su s'intégrer rapidement dans l'équipe. Professionnel, Ulysse a su prendre en compte rapidement les directives . 
-                    Application fiabilisée et développée sous PowerApps.<br/> Fonctionnelle et adaptée aux utilisateurs Ulysse a su prendre en compte les remarques des agents. Notices d'utilisation et de maintenance rédigées à l'issu du stage. Application déployée au sein de Technifret.
+                <p className='pb-[1rem]'>"Excellent stage en entreprise. A su s'intégrer rapidement dans l'équipe. Professionnel, Ulysse a su prendre en compte rapidement les directives. 
+                    <br/>Fonctionnelle et adaptée aux utilisateurs Ulysse a su prendre en compte les remarques des agents. Notices d'utilisation et de maintenance rédigées à l'issu du stage. Application déployée au sein de Technifret.
                     Stagiaire à recommander."
                 </p>
                 <img src='./images/fret_sncf.png' className='w-[11rem]'/>

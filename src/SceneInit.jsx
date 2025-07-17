@@ -27,6 +27,7 @@ export default class SceneInit {
 
   initialize() {
     this.scene = new THREE.Scene();
+    // Pas de couleur de fond pour garder la transparence
 
     // NOTE: Specify a canvas which is already created in the HTML.
     const canvas = document.getElementById(this.canvasId);
@@ -34,6 +35,8 @@ export default class SceneInit {
       canvas,
       // NOTE: Anti-aliasing smooths out the edges.
       antialias: true,
+      // Activer la transparence
+      alpha: true,
     });
 
     const width = canvas.clientWidth;
@@ -49,12 +52,20 @@ export default class SceneInit {
     this.camera.position.z = 8;
 
     this.renderer.setSize(width, height);
+    // Configurer pour la transparence
+    this.renderer.setClearColor(0x000000, 0); // Couleur noire avec alpha 0 (transparent)
     // this.renderer.shadowMap.enabled = true;
     // Pas besoin d'ajouter le domElement car on utilise le canvas existant
     // document.body.appendChild(this.renderer.domElement);
 
     this.clock = new THREE.Clock();
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    
+    // Désactiver le zoom
+    this.controls.enableZoom = false;
+    // Optionnel : désactiver aussi le pan (déplacement)
+    // this.controls.enablePan = false;
+    
     // this.stats = Stats();
     // document.body.appendChild(this.stats.dom);
 

@@ -29,9 +29,9 @@ const Navbar = () => {
         <a className='sm:text-2xl text-xl font-medium font-[roboto] tracking-wide sm:max-w-full text-center max-w-1 hidden sm:flex'>Ulysse COUCHOUD</a>
         <div className='sm:text-2xl text-xl font-medium font-[roboto] tracking-wide sm:max-w-full text-center max-w-1 sm:hidden'>Ulysse</div>
         <div className='md:flex gap-10 hidden'>
-            <a className='hover:text-purple-300 transition-colors cursor-pointer'>Projet</a>
-            <a className='hover:text-purple-300 transition-colors cursor-pointer'>Expérience</a>
-            <a className='hover:text-purple-300 transition-colors cursor-pointer'>Compétences</a>
+            <a className='hover:text-purple-300 transition-colors cursor-pointer' href='#experience'>Expérience</a>
+            <a className='hover:text-purple-300 transition-colors cursor-pointer' href='#skills'>Compétences</a>
+            <a className='hover:text-purple-300 transition-colors cursor-pointer' href='#projects'>Projets</a>
         </div>
         <button className="btn btn-outline hover:bg-white hover:text-black">Me contacter</button>
       </div>
