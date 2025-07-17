@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Hero from './sections/Hero';
 import Navbar from './components/Navbar';
 import Experience from './sections/Experience';
+import Skills from './sections/Skills';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <Experience />
+      <Skills />
     </>
   );
 }

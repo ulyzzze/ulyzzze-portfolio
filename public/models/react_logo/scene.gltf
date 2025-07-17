@@ -52,70 +52,14 @@
       "componentType": 5125,
       "count": 58944,
       "type": "SCALAR"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 897360,
-      "componentType": 5126,
-      "count": 910,
-      "max": [
-        0.9933515787124634,
-        0.9933514595031738,
-        0.41138842701911926
-      ],
-      "min": [
-        -0.9933515787124634,
-        -0.9933515787124634,
-        0.038673363626003265
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 908280,
-      "componentType": 5126,
-      "count": 910,
-      "max": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "min": [
-        -1.0,
-        -1.0,
-        -1.0
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 299120,
-      "componentType": 5126,
-      "count": 910,
-      "max": [
-        1.0000001192092896,
-        1.0000003576278687
-      ],
-      "min": [
-        0.0,
-        0.010013577528297901
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 235776,
-      "componentType": 5125,
-      "count": 4224,
-      "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
       "author": "xenadus (https://sketchfab.com/xenadus)",
-      "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
-      "source": "https://sketchfab.com/3d-models/react-logo-circle-540ff21ac0f54a038df6f634c7cce726",
-      "title": "React logo circle"
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/react-logo-76174ceeba96487f9863f974636f641e",
+      "title": "React logo"
     },
     "generator": "Sketchfab-15.8.0",
     "version": "2.0"
@@ -123,22 +67,22 @@
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 252672,
+      "byteLength": 235776,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 306400,
-      "byteOffset": 252672,
+      "byteLength": 299120,
+      "byteOffset": 235776,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 919200,
-      "byteOffset": 559072,
+      "byteLength": 897360,
+      "byteOffset": 534896,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
@@ -146,7 +90,7 @@
   ],
   "buffers": [
     {
-      "byteLength": 1478272,
+      "byteLength": 1432256,
       "uri": "scene.bin"
     }
   ],
@@ -169,20 +113,6 @@
         "metallicFactor": 0.0,
         "roughnessFactor": 0.86662048367891
       }
-    },
-    {
-      "doubleSided": true,
-      "name": "Material.001",
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.0290993,
-          0.0290993,
-          0.0290994,
-          1.0
-        ],
-        "metallicFactor": 0.0,
-        "roughnessFactor": 0.9925961359107832
-      }
     }
   ],
   "meshes": [
@@ -200,21 +130,6 @@
           "mode": 4
         }
       ]
-    },
-    {
-      "name": "Backdrop_Material.001_0",
-      "primitives": [
-        {
-          "attributes": {
-            "NORMAL": 5,
-            "POSITION": 4,
-            "TEXCOORD_0": 6
-          },
-          "indices": 7,
-          "material": 1,
-          "mode": 4
-        }
-      ]
     }
   ],
   "nodes": [
@@ -223,13 +138,13 @@
         1
       ],
       "matrix": [
-        -2.220446049250313e-16,
-        -2.220446049250313e-16,
         1.0,
         0.0,
-        1.0,
-        -4.930380657631324e-32,
+        0.0,
+        0.0,
+        0.0,
         2.220446049250313e-16,
+        -1.0,
         0.0,
         0.0,
         1.0,
@@ -264,12 +179,11 @@
         0.0,
         1.0
       ],
-      "name": "react-logo-circle.fbx"
+      "name": "be9210d376244066bed9d265a7a3a60e.fbx"
     },
     {
       "children": [
-        3,
-        5
+        3
       ],
       "name": "RootNode"
     },
@@ -278,21 +192,21 @@
         4
       ],
       "matrix": [
-        -1.711996642116335e-06,
-        -39.16591644287099,
-        2.334470258589388e-06,
+        7.625885496706934e-06,
+        -39.16591644287035,
+        -3.936927827397437e-14,
         0.0,
-        -6.3809378289318055e-06,
-        -2.334469980298814e-06,
-        -39.165916442870504,
+        39.16591644287035,
+        7.625885496706934e-06,
+        -4.6704884389250017e-07,
         0.0,
-        52.73355865478441,
-        -2.305057652342795e-06,
-        -8.591387214495791e-06,
+        6.288413457650023e-07,
+        6.943256277041852e-14,
+        52.73355865478515,
         0.0,
         0.0,
         7.935468673706055,
-        0.0,
+        18.101566314697266,
         1.0
       ],
       "name": "React-Logo"
@@ -300,34 +214,6 @@
     {
       "mesh": 0,
       "name": "React-Logo_Material.002_0"
-    },
-    {
-      "children": [
-        6
-      ],
-      "matrix": [
-        1.871245785405856e-05,
-        -247.85401916503827,
-        -7.386625370483845e-06,
-        0.0,
-        -1.0834044233257942e-05,
-        7.386624531205466e-06,
-        -247.85401916503872,
-        0.0,
-        52.73355865478496,
-        3.9812729899841045e-06,
-        -2.305057151774401e-06,
-        0.0,
-        -17.09052848815918,
-        7.935468673706055,
-        0.0,
-        1.0
-      ],
-      "name": "Backdrop"
-    },
-    {
-      "mesh": 1,
-      "name": "Backdrop_Material.001_0"
     }
   ],
   "scene": 0,
