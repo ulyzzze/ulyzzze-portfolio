@@ -6,28 +6,28 @@ const Skills = () => {
     {
       title: "Technologies Frontend",
       skills: [
-        { name: "React", level: 90, color: "from-blue-400 to-blue-600" },
-        { name: "JavaScript", level: 85, color: "from-yellow-400 to-yellow-600" },
-        { name: "HTML/CSS", level: 88, color: "from-orange-400 to-red-500" },
-        { name: "Tailwind CSS", level: 82, color: "from-cyan-400 to-blue-500" }
+        { name: "React", level: 80, color: "from-blue-400 to-blue-600" },
+        { name: "JavaScript", level: 70, color: "from-yellow-400 to-yellow-600" },
+        { name: "Three.js", level: 50, color: "from-orange-400 to-red-500" },
+        { name: "Tailwind CSS", level: 80, color: "from-cyan-400 to-blue-500" }
       ]
     },
     {
       title: "Technologies Backend",
       skills: [
-        { name: "Python", level: 92, color: "from-green-400 to-blue-500" },
-        { name: "C++", level: 78, color: "from-blue-500 to-purple-600" },
-        { name: "Node.js", level: 75, color: "from-green-500 to-green-700" },
-        { name: "SQL", level: 80, color: "from-gray-400 to-gray-600" }
+        { name: "Python", level: 75, color: "from-green-400 to-blue-500" },
+        { name: "Node.js / Express", level: 70, color: "from-green-500 to-green-700" },
+        { name: "SQL", level: 50, color: "from-gray-400 to-gray-600" },
+        { name: "API", level: 80, color: "from-blue-500 to-purple-600" }
       ]
     },
     {
       title: "Outils & DevOps",
       skills: [
-        { name: "Git", level: 88, color: "from-orange-500 to-red-600" },
-        { name: "Docker", level: 70, color: "from-blue-400 to-blue-700" },
-        { name: "Linux", level: 82, color: "from-yellow-600 to-orange-500" },
-        { name: "VS Code", level: 95, color: "from-blue-500 to-indigo-600" }
+        { name: "Git", level: 90, color: "from-orange-500 to-red-600" },
+        { name: "VS Code", level: 100, color: "from-blue-500 to-indigo-600" },
+        { name: "Linux", level: 85, color: "from-yellow-600 to-orange-500" },
+        { name: "Docker ", level: 50, color: "from-blue-400 to-blue-700" }
       ]
     }
   ];
@@ -64,26 +64,26 @@ const Skills = () => {
           <div className='flex flex-row items-center justify-center gap-5 sm:gap-[3rem] flex-wrap'>
             <div className="group">
               <ThreeLogoScene modelPath="/models/react_logo/scene.gltf" canvasId="reactCanvas" text="React" x={0.8} y={0.8} z={1}/>
-              <div className="mt-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-sm text-blue-400">Framework JavaScript</p>
+              <div className="mt-8 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm text-blue-400">Développement front-end</p>
               </div>
             </div>
             <div className="group">
               <ThreeLogoScene modelPath="/models/python_logo/scene.gltf" canvasId="pythonCanvas" text="Python" x={0.7} y={0.7} z={0.3}/>
-              <div className="mt-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-sm text-green-400">Langage de programmation</p>
+              <div className="mt-8 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm text-green-400">Intelligence artificiel et algorithmes</p>
               </div>
             </div>
             <div className="group">
               <ThreeLogoScene modelPath="/models/c_logo/scene.gltf" canvasId="C++Canvas" text="C++" x={0.06} y={0.06} z={0.1}/>
-              <div className="mt-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="mt-8 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-sm text-blue-300">Programmation système</p>
               </div>
             </div>
             <div className="group">
               <ThreeLogoScene modelPath="/models/git_logo/scene.gltf" canvasId="GitCanvas" text="Git" x={2.8} y={2.8} z={1.3}/>
-              <div className="mt-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-sm text-orange-400">Contrôle de version</p>
+              <div className="mt-8 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm text-orange-400">Gestion de projets</p>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ const Skills = () => {
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mb-16'>
           {skillCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="card bg-black-100/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-800 hover:border-gray-600 transition-all duration-300 group">
-              <div className="glow absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               <div className="relative z-10">
                 <h3 className='text-xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
                   {category.title}
@@ -111,10 +111,10 @@ const Skills = () => {
                       </div>
                       <div className='h-2 bg-gray-700 rounded-full overflow-hidden'>
                         <div 
-                          className={`h-full bg-gradient-to-r ${skill.color} rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 ease-out origin-left`}
+                          className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-transform duration-1000 ease-out origin-left`}
                           style={{ 
-                            animation: `skillBar 2s ease-out ${skillIndex * 0.2}s forwards`,
-                            transform: `scaleX(${skill.level / 100})`
+                            '--skill-level': skill.level / 100,
+                            animation: `skillBar 2s ease-out ${skillIndex * 0.2}s forwards`
                           }}
                         ></div>
                       </div>
@@ -134,7 +134,7 @@ const Skills = () => {
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             <div className='text-center group cursor-pointer'>
               <div className='text-3xl md:text-4xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform'>
-                15+
+                10+
               </div>
               <div className='text-gray-300 text-sm'>
                 Technologies
@@ -142,7 +142,7 @@ const Skills = () => {
             </div>
             <div className='text-center group cursor-pointer'>
               <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform'>
-                50+
+                30+
               </div>
               <div className='text-gray-300 text-sm'>
                 Projets
@@ -150,7 +150,7 @@ const Skills = () => {
             </div>
             <div className='text-center group cursor-pointer'>
               <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform'>
-                3+
+                2+
               </div>
               <div className='text-gray-300 text-sm'>
                 Années d'exp.
