@@ -24,7 +24,7 @@ const Navbar = () => {
 
 
   return (
-    <div className='px-6 sm:px-[2rem] lg:px-[5rem] fixed bg-black overflow-hidden top-0 w-[100%] z-1'>
+    <div className='px-6 sm:px-[2rem] lg:px-[5rem] fixed bg-black/95 backdrop-blur-sm overflow-hidden top-0 w-[100%] z-50 border-b border-gray-800/50'>
       <div className={`flex flex-row justify-between items-center transition-all duration-300 ${scrolled ? 'py-[1rem]' : 'py-[3rem]'}`}>
         <a className='sm:text-2xl text-xl font-medium font-[roboto] tracking-wide sm:max-w-full text-center max-w-1 hidden sm:flex'>Ulysse COUCHOUD</a>
         <div className='sm:text-2xl text-xl font-medium font-[roboto] tracking-wide sm:max-w-full text-center max-w-1 sm:hidden'>Ulysse</div>
