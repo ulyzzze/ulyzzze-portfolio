@@ -134,7 +134,7 @@ const Skills = () => {
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             <div className='text-center group cursor-pointer'>
               <div className='text-3xl md:text-4xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform'>
-                10+
+                15+
               </div>
               <div className='text-gray-300 text-sm'>
                 Technologies
