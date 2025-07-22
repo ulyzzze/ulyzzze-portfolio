@@ -5,6 +5,7 @@ import Hero from './sections/Hero';
 import Navbar from './components/Navbar';
 import Experience from './sections/Experience';
 import Skills from './sections/Skills';
+import Projetcs from './sections/Projetcs';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Hero />
       <Experience />
       <Skills />
+      <Projetcs />
     </>
   );
 }

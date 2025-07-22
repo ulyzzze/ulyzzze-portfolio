@@ -58,9 +58,9 @@ const Skills = () => {
 
         {/* 3D Logo Section */}
         <div className='mb-20'>
-          <h2 className='text-2xl md:text-3xl font-semibold text-center mb-12 text-gray-200'>
+          {/* <h2 className='text-2xl md:text-3xl font-semibold text-center mb-12 text-gray-200'>
             Technologies Principales
-          </h2>
+          </h2> */}
           <div className='flex flex-row items-center justify-center gap-5 sm:gap-[3rem] flex-wrap'>
             <div className="group">
               <ThreeLogoScene modelPath="/models/react_logo/scene.gltf" canvasId="reactCanvas" text="React" x={0.8} y={0.8} z={1}/>
