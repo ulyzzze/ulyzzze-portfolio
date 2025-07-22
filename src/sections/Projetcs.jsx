@@ -8,7 +8,12 @@ const Projetcs = ({ onModalStateChange }) => {
       id: 1,
       title: "ROBOCAR",
       description: "Développement d'une IA capable de segmenter la route à partir d'images pour générer un masque exploitable par raycasting 2D. L'objectif est de permettre à une voiture équipée d'une caméra de suivre un circuit de manière autonome.",
-      fullDescription: "Ce projet consiste en la création d'une intelligence artificielle avancée capable de comprendre et de segmenter les éléments routiers à partir d'images capturées en temps réel. L'IA utilise des techniques de deep learning pour analyser chaque pixel de l'image et créer un masque binaire précis de la route. Ce masque est ensuite exploité par un système de raycasting 2D qui permet à une voiture autonome de naviguer sur un circuit en temps réel. Le projet inclut également un simulateur Unity pour tester et valider les performances de l'IA dans différents environnements virtuels.",
+      fullDescription: `Ce projet consiste en la création d'une intelligence artificielle avancée capable de comprendre et de segmenter les éléments routiers à partir d'images capturées en temps réel.
+
+        L'IA utilise des techniques de deep learning pour analyser chaque pixel de l'image grâce au modèle U-Net et créer un masque binaire précis de la route. 
+        Ce masque est ensuite exploité par un système de raycasting 2D qui permet d'envoyer les données à une autre IA qui indiquera à la voiture quel action à effectuer sur un circuit en temps réel. 
+
+        Le projet inclut également un simulateur Unity pour tester et valider les performances de l'IA dans différents environnements virtuels.`,
       technologies: ["Python", "Numpy", "PyTorch", "Unity"],
       images: [
         "/images/robocar_car.jpeg",
@@ -18,16 +23,16 @@ const Projetcs = ({ onModalStateChange }) => {
       liveLink: "#",
       status: "Terminé",
       duration: "4 mois",
-      team: "2 personnes",
+      team: "6 personnes",
       challenges: [
-        "Optimisation des performances en temps réel",
+        "Optimisation des performances de l'IA",
         "Précision de la segmentation dans différentes conditions d'éclairage",
-        "Intégration du système avec Unity"
+        "Avoir un modèle le moins lourd possible"
       ],
       achievements: [
-        "IA capable de segmenter avec 95% de précision",
-        "Temps de traitement < 50ms par image",
-        "Navigation autonome réussie sur circuits complexes"
+        "IA capable de segmenter des images réels",
+        "Raycast fonctionnel et entièrement modifiable",
+        "Navigation autonome réussie sur différents circuit via simulateur"
       ]
     },
     {
@@ -343,7 +348,7 @@ const Projetcs = ({ onModalStateChange }) => {
                     {/* Description */}
                     <div className="mb-6">
                       <h3 className="text-xl font-bold text-white mb-4">Description complète</h3>
-                      <p className="text-gray-300 leading-relaxed">{selectedProject.fullDescription}</p>
+                      <p className="text-gray-300 leading-relaxed whitespace-pre-line">{selectedProject.fullDescription}</p>
                     </div>
 
                     {/* Technologies */}
@@ -426,7 +431,7 @@ const Projetcs = ({ onModalStateChange }) => {
                     </svg>
                     <span>Voir le code</span>
                   </a>
-                  <a 
+                  {/* <a 
                     href={selectedProject.liveLink}
                     target='_blank'
                     rel="noopener noreferrer"
@@ -436,7 +441,7 @@ const Projetcs = ({ onModalStateChange }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     <span>Voir la démo</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
