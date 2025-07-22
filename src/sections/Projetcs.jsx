@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Projetcs = () => {
+const Projetcs = ({ onModalStateChange }) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
@@ -176,11 +176,13 @@ const Projetcs = () => {
   const openProjectModal = (project) => {
     setSelectedProject(project);
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    onModalStateChange?.(true); // Notify parent that modal is open
   };
 
   const closeProjectModal = () => {
     setSelectedProject(null);
     document.body.style.overflow = 'unset';
+    onModalStateChange?.(false); // Notify parent that modal is closed
   };
 
   return (
@@ -307,7 +309,7 @@ const Projetcs = () => {
                   </div>
                   <button 
                     onClick={closeProjectModal}
-                    className="p-2 hover:bg-gray-800 rounded-full transition-colors text-gray-400 hover:text-white"
+                    className="p-2 hover:bg-gray-800 rounded-full transition-colors text-gray-400 hover:text-white cursor-pointer"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
