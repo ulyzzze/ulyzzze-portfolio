@@ -21,13 +21,13 @@ const Projetcs = ({ onModalStateChange }) => {
       ],
       githubLink: "https://github.com/ulyzzze/mask_generator",
       liveLink: "#",
-      status: "Terminé",
+      status: "En cours",
       duration: "4 mois",
       team: "6 personnes",
       challenges: [
         "Optimisation des performances de l'IA",
         "Précision de la segmentation dans différentes conditions d'éclairage",
-        "Avoir un modèle le moins lourd possible"
+        "Obtenir un modèle le moins lourd possible"
       ],
       achievements: [
         "IA capable de segmenter des images réels",
@@ -38,53 +38,69 @@ const Projetcs = ({ onModalStateChange }) => {
     {
       id: 2,
       title: "Spotiflyx",
-      description: "Un bot Discord intelligent utilisant l'IA pour répondre aux questions des utilisateurs et modérer automatiquement les conversations du serveur.",
-      fullDescription: "Spotiflyx est un bot Discord avancé qui combine plusieurs fonctionnalités intelligentes pour améliorer l'expérience utilisateur sur les serveurs Discord. Il utilise l'API OpenAI pour comprendre et répondre aux questions des utilisateurs de manière contextuelle. Le bot inclut également un système de modération automatique qui peut détecter les messages inappropriés, gérer les spams et maintenir un environnement sain sur le serveur.",
-      technologies: ["Python", "Discord.py", "OpenAI API", "SQLite"],
+      description: "Service de streaming musical permettant aux utilisateurs d'écouter de la musique en ligne via l'API de Spotify. Spotiflyx offre également la possibilité aux utilisateurs de regarder des vidéos YouTube directement depuis le site. ",
+      fullDescription: `Spotiflyx est un service de streaming musical permettant aux utilisateurs d'écouter de la musique en ligne via l'API de Spotify. Mais ce n'est pas tout ! Spotiflyx offre également la possibilité aux utilisateurs de regarder des vidéos YouTube directement depuis le site.
+      
+        Objectif du projet 🎯
+    
+        -Réaliser une application web complète en utilisant les technologies modernes du web
+        -Mettre en pratique les connaissances acquises au cours de la formation
+        -Travail en équipe
+        -Découvrir les bases d'implémentation d'API externes
+        -Construire un serveur robuste et sécurisé
+        -Découvrir les bases de données SQL
+        -Réaliser un projet complet de A à Z à partir d'une liste de users stories`,
+      technologies: ["React", "PostgreSQL", "Node.js", "Docker"],
       images: [
-        "/images/project2-1.jpg",
-        "/images/project2-2.jpg"
+        "/images/spotiflyx.png",
+        "/images/spotiflyx_website.png"
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/ulyzzze/spotiflyx",
       liveLink: "#",
-      status: "En cours",
-      duration: "3 mois",
-      team: "1 personne",
+      status: "Terminé",
+      duration: "1 mois",
+      team: "2 personne",
       challenges: [
-        "Gestion des limitations de l'API OpenAI",
-        "Modération contextuelle intelligente",
-        "Optimisation des coûts d'utilisation"
+        "Gestion des API Youtube et Spotify",
+        "Utilisation de Docker",
+        "Gestion de base de donnée SQL"
       ],
       achievements: [
-        "Déployé sur 15+ serveurs Discord",
-        "Traite 1000+ messages par jour",
-        "Taux de satisfaction utilisateur de 92%"
+        "Création de compte sur la platform",
+        "Visionnage et publication de vidéos youtube",
+        "Intéraction entre utilisateurs (likes, sauvegarde de vidéos etc.)"
       ]
     },
     {
       id: 3,
-      title: "Application Mobile Fitness",
-      description: "Une application mobile de fitness permettant de suivre ses entraînements, calories et progrès avec une interface intuitive et moderne.",
-      fullDescription: "Cette application mobile complète de fitness offre une expérience utilisateur exceptionnelle pour le suivi des activités physiques. Elle permet de créer des programmes d'entraînement personnalisés, de suivre les calories brûlées en temps réel, et de visualiser les progrès à travers des graphiques détaillés. L'application inclut également des fonctionnalités sociales pour motiver les utilisateurs et un système de recommandations basé sur l'IA.",
-      technologies: ["React Native", "Firebase", "Chart.js"],
+      title: "Raytracer",
+      description: "Ce Raytracer est un système de rendu graphique informatique développé en C++ qui crée des images photoréalistes en simulant le comportement physique de la lumière depuis une scène de configuration.",
+      fullDescription: `Ce Raytracer est un système de rendu graphique informatique développé en C++ qui crée des images photoréalistes en simulant le comportement physique de la lumière. Il utilise une technique appelée « ray tracing » (traçage de rayons), qui trace le chemin des rayons lumineux à travers une scène et calcule leurs interactions avec des objets virtuels afin de générer des images réalistes.
+
+      Contrairement à la rastérisation (qui projette des objets 3D sur un plan 2D), le ray tracing simule la physique réelle de la lumière pour créer des ombres, des reflets et d'autres effets optiques plus précis. Cela le rend particulièrement adapté à la génération d'images de haute qualité avec un éclairage réaliste.
+      
+      (Voir documentation Github pour plus d'infos)`,
+      technologies: ["C++"],
       images: [
-        "/images/project3-1.jpg",
-        "/images/project3-2.jpg"
+        "/images/raytracer_rectangle.png",
+        "/images/raytracer_cone.png"
+        
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/ulyzzze/raytracer",
       liveLink: "#",
       status: "Terminé",
-      duration: "5 mois",
-      team: "3 personnes",
+      duration: "1 mois",
+      team: "4 personnes",
       challenges: [
-        "Synchronisation en temps réel des données",
-        "Optimisation des performances sur différents devices",
-        "Intégration avec capteurs de fitness"
+        "Application de formules mathématiques",
+        "Parsing d'un fichier de config",
+        "Projection d'ombres en fonction des placements de lumières"
       ],
       achievements: [
-        "500+ téléchargements en beta",
-        "Note moyenne de 4.7/5",
-        "Temps de chargement < 2 secondes"
+        "Ajout de 7 formes géométriques entièrement modifiable (couleur, taille etc.)",
+        "Ajout de +10 différents matériaux (verre, plastique, etc.)",
+        "Ajout de texture sur les formes (images)",
+        "Ajout de lumières ambiantes et directionnels"
       ]
     },
     {
