@@ -6,7 +6,7 @@ const Projetcs = ({ onModalStateChange }) => {
   const projects = [
     {
       id: 1,
-      title: "ROBOCAR",
+      title: "Robocar",
       description: "Développement d'une IA capable de segmenter la route à partir d'images pour générer un masque exploitable par raycasting 2D. L'objectif est de permettre à une voiture équipée d'une caméra de suivre un circuit de manière autonome.",
       fullDescription: `Ce projet consiste en la création d'une intelligence artificielle avancée capable de comprendre et de segmenter les éléments routiers à partir d'images capturées en temps réel.
 
@@ -105,62 +105,69 @@ const Projetcs = ({ onModalStateChange }) => {
     },
     {
       id: 4,
-      title: "Dashboard Analytics",
-      description: "Un tableau de bord d'analyse de données avec visualisations interactives pour suivre les métriques business en temps réel.",
-      fullDescription: "Ce dashboard d'analytics enterprise permet aux entreprises de visualiser et analyser leurs données business en temps réel. Il offre des graphiques interactifs avancés, des filtres personnalisables, et des alertes automatiques. Le système peut traiter de gros volumes de données et présenter les insights de manière claire et actionnable pour la prise de décision.",
-      technologies: ["Vue.js", "D3.js", "Express", "PostgreSQL"],
+      title: "My-RPG",
+      description: "Un RPG complet développé en C avec CSFML, inspiré des classiques du genre, comprenant un système de combat, d'inventaire, de quêtes, de boss ainsi qu'une carte interactive.",
+      fullDescription: "My-RPG est un jeu de rôle (RPG) développé en C avec la bibliothèque CSFML. Le projet consiste à recréer un RPG classique avec une carte interactive, des combats au tour par tour, un système d'inventaire, de gestion d'expérience et de quêtes. Le jeu propose également des PNJ, des dialogues, des objets à ramasser, et une interface graphique personnalisée.",
+      technologies: ["C", "CSFML"],
       images: [
-        "/images/project4-1.jpg",
-        "/images/project4-2.jpg"
+        "/images/my_rpg.png",
+        "/images/entrainement.jpg"
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/ulyzzze/my-rpg",
       liveLink: "#",
       status: "Terminé",
-      duration: "6 mois",
+      duration: "1 mois",
       team: "4 personnes",
       challenges: [
-        "Traitement de gros volumes de données",
-        "Optimisation des requêtes complexes",
-        "Interface responsive pour tous écrans"
+        "Implémentation d'un système de combat au tour par tour",
+        "Gestion de l'inventaire et des objets ramassables",
+        "Système de sauvegarde et chargement de la progression",
       ],
       achievements: [
-        "Traite 1M+ de points de données",
-        "Temps de réponse < 500ms",
-        "Adoption par 20+ entreprises"
+        "Réalisation d'un RPG jouable de A à Z",
+        "Système de combat fonctionnel et équilibré",
+        "Implémentation d'un système de quêtes et de dialogues avec PNJ",
+        "Gestion de l'inventaire et des objets",
+        "Animation de sprites"
       ]
     },
     {
       id: 5,
-      title: "Jeu 2D Platformer",
-      description: "Un jeu de plateforme 2D développé en C++ avec des mécaniques de jeu avancées et des graphismes pixelisés rétro.",
-      fullDescription: "Ce jeu de plateforme 2D rétro combine des mécaniques de jeu classiques avec des innovations modernes. Il features un système de physique avancé avec Box2D, des animations fluides, un système de progression, et plusieurs mondes avec des défis uniques. Le jeu inclut également un éditeur de niveaux intégré et un système de sauvegarde robuste.",
-      technologies: ["C++", "SFML", "Box2D"],
+      title: "Octopus",
+      description: "Déploiement automatisé d'une infrastructure distribuée (Redis, PostgreSQL, applications web) à l'aide d'Ansible. Ce projet DevOps consistait à configurer des machines virtuelles, écrire des rôles Ansible réutilisables et orchestrer le déploiement complet d'une application de vote distribuée.",
+      fullDescription: `Octopus est un projet DevOps dont l'objectif principal était de mettre en place une infrastructure distribuée complète à l'aide d'Ansible. Le projet consistait à configurer plusieurs machines virtuelles (VM) pour héberger différents services : une base de données PostgreSQL, un serveur Redis, ainsi que plusieurs applications web (poll, result, worker).
+
+Nous avons conçu et écrit des rôles Ansible modulaires pour automatiser l'installation, la configuration et la gestion de chaque composant. L'infrastructure devait être facilement redéployable et maintenable, avec une gestion centralisée de la configuration. Le projet incluait également la gestion des variables d'environnement, la sécurisation des accès, et la documentation de chaque étape du déploiement.
+
+Ce projet a permis de mettre en pratique les concepts d'infrastructure as code (IaC), d'automatisation, et de gestion de configuration à grande échelle.`,
+      technologies: ["Ansible"],
       images: [
-        "/images/project5-1.jpg",
-        "/images/project5-2.jpg"
+        "/images/octopus_project.png",
+        "/images/devops.png"
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/ulyzzze/octopus/tree/main",
       liveLink: "#",
       status: "Terminé",
-      duration: "8 mois",
+      duration: "3 semaines",
       team: "2 personnes",
       challenges: [
-        "Optimisation des performances graphiques",
-        "Collision detection précise",
-        "Génération procédurale de contenu"
+        "Automatisation du déploiement de services sur plusieurs machines virtuelles",
+        "Gestion des dépendances et de l'ordre d'exécution des tâches",
+        "Sécurisation des accès et gestion des variables sensibles",
+        "Débogage et validation de l'infrastructure distribuée"
       ],
       achievements: [
-        "60 FPS stable sur toutes plateformes",
-        "50+ niveaux uniques",
-        "Système de modding fonctionnel"
+        "Création de rôles Ansible personnalisés pour chaque service (PostgreSQL, Redis, applications web)",
+        "Documentation détaillée du processus de déploiement",
+        "Infrastructure reproductible et facilement maintenable",
       ]
     },
     {
       id: 6,
-      title: "API REST Microservices",
+      title: "Zappy",
       description: "Architecture microservices complète avec API REST, authentification JWT et déploiement containerisé avec Docker.",
       fullDescription: "Cette architecture microservices moderne démontre les meilleures pratiques du développement backend scalable. Elle inclut plusieurs services interconnectés, un système d'authentification robuste avec JWT, une gateway API, et un système de monitoring complet. Tout est containerisé avec Docker et déployé avec orchestration Kubernetes.",
-      technologies: ["Python", "FastAPI", "Docker", "Redis"],
+      technologies: ["Rust", "SFML", "C"],
       images: [
         "/images/project6-1.jpg",
         "/images/project6-2.jpg"
