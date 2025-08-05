@@ -33,9 +33,9 @@ const Contact = () => {
     gltfLoader.load('/models/setup/scene.gltf', (gltfScene) => {
       console.log('Office model loaded:', gltfScene);
       loadedModel = gltfScene;
-      loadedModel.scene.scale.set(4.3, 4.3, 4.3);
+      loadedModel.scene.scale.set(2.5, 2.5, 2.5);
       loadedModel.scene.position.set(0, -1, 0);
-      loadedModel.scene.rotation.y += 0.5;
+      loadedModel.scene.rotation.y = -1.5;
       scene.scene.add(gltfScene.scene);
     }, undefined, (error) => {
       console.error('Error loading office model:', error);
