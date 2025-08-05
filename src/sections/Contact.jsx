@@ -109,7 +109,14 @@ const Contact = () => {
 
   return (
     <section id="contact" className="min-h-screen text-white py-20 px-4 content-overlay relative z-10">
-      <div className="max-w-7xl mx-auto">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-32 left-10 w-80 h-80 bg-gradient-to-r from-pink-500/15 to-rose-500/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-32 right-20 w-72 h-72 bg-gradient-to-r from-violet-500/15 to-purple-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-20">
         {/* En-tête de section */}
         <div className='text-center mb-16'>
           <div className="inline-block relative">
@@ -263,19 +270,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 text-gray-300 p-4 bg-gray-800/30 rounded-lg">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-medium">Localisation</p>
-                  <p className="text-sm text-gray-400">Lyon, France</p>
-                </div>
-              </div>
-
               <div className="flex items-center space-x-4 text-gray-300 p-4 bg-gray-800/30 rounded-lg sm:col-span-2 lg:col-span-1">
                 <div className="w-12 h-12 bg-pink-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -287,6 +281,19 @@ const Contact = () => {
                     <a href="https://www.linkedin.com/in/ulysse-couchoud/" target='_blank' rel="noopener noreferrer" className="text-sm text-gray-400 cursor-pointer">
                         Ulysse Couchoud
                     </a>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 text-gray-300 p-4 bg-gray-800/30 rounded-lg">
+                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-medium">Localisation</p>
+                  <p className="text-sm text-gray-400">Lyon, France</p>
                 </div>
               </div>
             </div>

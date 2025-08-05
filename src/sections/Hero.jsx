@@ -59,6 +59,13 @@ const Hero = () => {
 
   return (
     <section id='hero' className='relative overflow-hidden content-overlay'>
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-32 right-20 w-80 h-80 bg-gradient-to-r from-blue-500/15 to-cyan-500/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-40 left-10 w-72 h-72 bg-gradient-to-r from-purple-500/15 to-pink-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
+      
       <div className='absolute top-0 left-0 z-50'>
         <img src='/images/bg.png' alt="background" />
       </div>
