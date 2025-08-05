@@ -58,15 +58,15 @@ const Hero = () => {
     }, []);
 
   return (
-    <section id='hero' className='relative overflow-hidden '>
+    <section id='hero' className='relative overflow-hidden content-overlay'>
       <div className='absolute top-0 left-0 z-50'>
         <img src='/images/bg.png' alt="background" />
       </div>
         <header>
           <div className='flex flex-col lg:flex-row pt-[10rem] sm:pt-[15rem] lg:pt-[17rem] px-4 sm:px-8 lg:pl-[5rem] lg:pr-[5rem] justify-between items-center lg:items-start gap-8 lg:gap-0'>
             <div className='flex flex-col text-center lg:text-left'>
-              <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl pb-7 font-bold bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent'>Bienvenue.</h1>
-              <p className='text-lg max-w-2xl'>Mon nom est Ulysse COUCHOUD, un jeune développeur lyonnais passioné d'informatique. Étudiant à Epitech Lyon, je suis passioné par le développement
+              <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl pb-7 font-bold bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent drop-shadow-lg'>Bienvenue.</h1>
+              <p className='text-lg max-w-2xl text-gray-100 drop-shadow-md'>Mon nom est Ulysse COUCHOUD, un jeune développeur lyonnais passioné d'informatique. Étudiant à Epitech Lyon, je suis passioné par le développement
                 web ainsi que l'intelligence artificiel.
               </p>
               <ShimmerButton className="shadow-4xl w-fit mt-10 self-center lg:self-start">

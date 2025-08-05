@@ -108,7 +108,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen bg-black text-white py-20 px-4">
+    <section id="contact" className="min-h-screen text-white py-20 px-4 content-overlay relative z-10">
       <div className="max-w-7xl mx-auto">
         {/* En-tête de section */}
         <div className='text-center mb-16'>

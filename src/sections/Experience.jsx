@@ -3,12 +3,12 @@ import React from 'react'
 const Experience = () => {
   return (
     
-    <div className='flex justify-center flex-col items-center pb-[10rem]'>
-        <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent mb-4 text-center' id='experience'>
+    <div className='flex justify-center flex-col items-center pb-[10rem] content-overlay relative z-10'>
+        <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent mb-4 text-center drop-shadow-lg' id='experience'>
             Expérience Professionnel.
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6"></div>
-        <p className='text-center text-gray-300 text-lg max-w-2xl mx-auto'>
+        <p className='text-center text-gray-100 text-lg max-w-2xl mx-auto drop-shadow-md'>
             J'ai pu réaliser un stage lors de ma deuxième année chez HexaFret, anciennement connu sous FretSNCF
         </p>
         <div className='flex lg:flex-row flex-col justify-between gap-10 px-10 items-center lg:items-stretch pt-[5rem]'>

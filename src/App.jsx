@@ -7,12 +7,14 @@ import Experience from './sections/Experience';
 import Skills from './sections/Skills';
 import Projetcs from './sections/Projetcs';
 import Contact from './sections/Contact';
+import AnimatedBackground from './components/AnimatedBackground';
 
 const App = () => {
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
 
   return (
     <>
+      <AnimatedBackground />
       <Navbar isProjectModalOpen={isProjectModalOpen} />
       <Hero />
       <Experience />
