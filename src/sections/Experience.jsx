@@ -4,7 +4,7 @@ const Experience = () => {
   return (
     
     <div className='flex justify-center flex-col items-center pb-[10rem]'>
-        <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent mb-4' id='experience'>
+        <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent mb-4 text-center' id='experience'>
             Expérience Professionnel.
         </h1>
         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6"></div>
