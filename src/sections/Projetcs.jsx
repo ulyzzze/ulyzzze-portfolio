@@ -21,7 +21,7 @@ const Projetcs = ({ onModalStateChange }) => {
       ],
       githubLink: "https://github.com/ulyzzze/mask_generator",
       liveLink: "#",
-      status: "En cours",
+      status: "Terminé",
       duration: "4 mois",
       team: "6 personnes",
       challenges: [
@@ -165,27 +165,32 @@ Ce projet a permis de mettre en pratique les concepts d'infrastructure as code (
     {
       id: 6,
       title: "Zappy",
-      description: "Architecture microservices complète avec API REST, authentification JWT et déploiement containerisé avec Docker.",
-      fullDescription: "Cette architecture microservices moderne démontre les meilleures pratiques du développement backend scalable. Elle inclut plusieurs services interconnectés, un système d'authentification robuste avec JWT, une gateway API, et un système de monitoring complet. Tout est containerisé avec Docker et déployé avec orchestration Kubernetes.",
+      description: "Le but du projet Zappy est de concevoir un serveur de jeu multijoueur ainsi que des clients automatisés (des IA) capables de jouer de manière autonome sur ce serveur. Les IA doivent collecter des ressources, évoluer de niveau, coopérer ou rivaliser avec d’autres, et surtout réaliser des rituels d'incantation pour gagner la partie.",
+      fullDescription: `Le projet consiste à développer un serveur de jeu multijoueur en C, capable de gérer des clients connectés simultanément dans un environnement persistant. L’objectif principal est de créer un monde virtuel où des joueurs, incarnés par des IA autonomes, doivent évoluer en collectant des ressources, coopérer avec d’autres, et effectuer des rituels d’incantation pour monter en niveau et remporter la partie.
+
+Le serveur doit gérer la communication réseau, la gestion de la carte et la synchronisation des actions des joueurs en temps réel. Les clients IA, quant à eux, doivent être capables de prendre des décisions de manière autonome en analysant les informations reçues du serveur.
+
+Le projet met donc l’accent sur la programmation réseau, la gestion de la concurrence, et le développement d’intelligences artificielles stratégiques..`,
       technologies: ["Rust", "SFML", "C"],
       images: [
-        "/images/project6-1.jpg",
-        "/images/project6-2.jpg"
+        "/images/rust.png",
+        "/images/ia.png"
       ],
-      githubLink: "#",
+      githubLink: "https://github.com/ulyzzze/zappy",
       liveLink: "#",
-      status: "En cours",
-      duration: "4 mois",
-      team: "3 personnes",
+      status: "Terminé",
+      duration: "1 mois",
+      team: "6 personnes",
       challenges: [
-        "Orchestration de multiples services",
-        "Gestion des dépendances inter-services",
-        "Monitoring et logging distribué"
+        "Développement d'IA autonomes en Rust capables de prendre des décisions en temps réel",
+        "Gestion de la communication réseau asynchrone avec le serveur de jeu",
+        "Coordination et coopération entre plusieurs IA pour réaliser des rituels complexes",
+        "Gestion des états concurrents et des priorités d'action",
       ],
       achievements: [
-        "99.9% de uptime",
-        "Support de 10k+ requêtes/minute",
-        "Déploiement automatisé CI/CD"
+        "Création d'une IA robuste et évolutive en Rust, capable de jouer de façon totalement autonome",
+        "Implémentation d'une logique de coopération entre IA pour maximiser les chances de victoire",
+        "Gestion intelligente de l'inventaire, des priorités et des déplacements sur la carte",
       ]
     }
   ];
@@ -470,26 +475,6 @@ Ce projet a permis de mettre en pratique les concepts d'infrastructure as code (
             </div>
           </div>
         )}
-
-        {/* Call to Action */}
-        <div className="mt-20 text-center">
-          <div className="bg-gradient-to-r from-gray-900/50 to-black-100/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-800">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Vous avez un projet en tête ?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Je suis toujours ouvert à de nouveaux défis et collaborations. N'hésitez pas à me contacter pour discuter de vos idées !
-            </p>
-            <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full text-white font-medium transition-all duration-300 hover:scale-105">
-              <span className="flex items-center gap-2">
-                💼 Collaborons ensemble
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   )

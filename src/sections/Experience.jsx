@@ -16,7 +16,7 @@ const Experience = () => {
                 <div className='flex flex-row items-center gap-5 pb-[1rem]'>
                     <div className="avatar">
                         <div className="w-12 rounded-full">
-                            <img src="./images/tuteur.png" />
+                            <img src="/images/tuteur.png" />
                         </div>
                     </div>
                     <div className='flex flex-col mr-4'>
@@ -28,23 +28,23 @@ const Experience = () => {
                     <br/>Fonctionnelle et adaptée aux utilisateurs Ulysse a su prendre en compte les remarques des agents. Notices d'utilisation et de maintenance rédigées à l'issu du stage. Application déployée au sein de Technifret.
                     Stagiaire à recommander."
                 </p>
-                <img src='./images/fret_sncf.png' className='w-[11rem]'/>
+                <img src='/images/fret_sncf.png' className='w-[11rem]'/>
             </div>
             <div className='lg:flex flex-col justify-between items-center relative hidden'>
                 <div className='w-[0.2rem] bg-linear-to-b from-purple-500 to-yellow-500 h-full absolute left-1/2 transform -translate-x-1/2'></div>
                 <div className="avatar">
                     <div className="w-16 rounded-full">
-                        <img src="./images/power_apps.png" className='bg-gray-600 p-2 border-4 border-gray-500 rounded-full'/>
+                        <img src="/images/power_apps.png" className='bg-gray-600 p-2 border-4 border-gray-500 rounded-full'/>
                     </div>
                 </div>
                 <div className="avatar">
                     <div className="w-16 rounded-full">
-                        <img src="./images/power_automate.png" className='bg-gray-600 p-2 border-4 border-gray-500 rounded-full'/>
+                        <img src="/images/power_automate.png" className='bg-gray-600 p-2 border-4 border-gray-500 rounded-full'/>
                     </div>
                 </div>
                 <div className="avatar">
                     <div className="w-16 rounded-full">
-                        <img src="./images/power_bi.png" className='bg-gray-600 p-2 border-4 border-gray-500 rounded-full'/>
+                        <img src="/images/power_bi.png" className='bg-gray-600 p-2 border-4 border-gray-500 rounded-full'/>
                     </div>
                 </div>
             </div>

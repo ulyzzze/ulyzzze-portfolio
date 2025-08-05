@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Experience from './sections/Experience';
 import Skills from './sections/Skills';
 import Projetcs from './sections/Projetcs';
+import Contact from './sections/Contact';
 
 const App = () => {
   const [isProjectModalOpen, setIsProjectModalOpen] = useState(false);
@@ -17,6 +18,7 @@ const App = () => {
       <Experience />
       <Skills />
       <Projetcs onModalStateChange={setIsProjectModalOpen} />
+      <Contact />
     </>
   );
 }
