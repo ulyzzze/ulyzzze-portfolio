@@ -58,7 +58,7 @@ const Hero = () => {
     }, []);
 
   return (
-    <section id='hero' className='relative overflow-hidden content-overlay'>
+    <section id='hero' className='relative overflow-hidden content-overlay sm:pb-[5rem]'>
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-32 right-20 w-80 h-80 bg-gradient-to-r from-blue-500/15 to-cyan-500/15 rounded-full blur-3xl animate-pulse"></div>
@@ -66,7 +66,7 @@ const Hero = () => {
         <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
       
-      <div className='absolute top-0 left-0 z-50'>
+      <div className='absolute top-0 left-0 z-50 sm:inline hidden'>
         <img src='/images/bg.png' alt="background" />
       </div>
         <header>
@@ -76,11 +76,15 @@ const Hero = () => {
               <p className='text-lg max-w-2xl text-gray-100 drop-shadow-md'>Mon nom est Ulysse COUCHOUD, un jeune développeur lyonnais passioné d'informatique. Étudiant à Epitech Lyon, je suis passioné par le développement
                 web ainsi que l'intelligence artificiel.
               </p>
-              <ShimmerButton className="shadow-4xl w-fit mt-10 self-center lg:self-start">
-                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                  Accéder a mes projets
-                </span>
-              </ShimmerButton>
+              <div className="flex justify-center lg:justify-start mt-10">
+                <a href='#projects' className="inline-block">
+                  <ShimmerButton className="shadow-4xl">
+                    <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                      Accéder a mes projets
+                    </span>
+                  </ShimmerButton>
+                </a>
+              </div>
             </div>
             <div className='w-full max-w-2xl lg:w-[45rem] h-[20rem] sm:h-[25rem] lg:h-[35rem] mt-0 sm:mt-[-5rem] lg:mt-[-10rem]'>
               <canvas id="myThreeJsCanvas" className='w-full h-full' />

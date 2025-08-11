@@ -1,5 +1,4 @@
 // API route pour gérer l'envoi d'emails de contact
-// Vous pouvez utiliser ce fichier avec Vercel, Netlify Functions, ou tout autre service serverless
 
 export default async function handler(req, res) {
   // Autoriser seulement les requêtes POST
@@ -25,14 +24,6 @@ export default async function handler(req, res) {
       });
     }
 
-    // Ici vous pouvez intégrer votre service d'email préféré :
-    // - EmailJS
-    // - SendGrid
-    // - Nodemailer avec SMTP
-    // - Resend
-    // - Etc.
-
-    // Exemple avec EmailJS (côté client) ou SendGrid (côté serveur)
     const emailData = {
       to: to || 'ulysse.couchoud@epitech.eu',
       from: email,
@@ -60,19 +51,7 @@ export default async function handler(req, res) {
       `
     };
 
-    // Simulation d'envoi d'email (remplacez par votre service réel)
     console.log('Email à envoyer:', emailData);
-    
-    // Pour l'instant, on simule un succès
-    // Dans un vrai projet, vous intégreriez ici votre service d'email
-
-    // Exemple avec SendGrid :
-    /*
-    const sgMail = require('@sendgrid/mail');
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-    
-    await sgMail.send(emailData);
-    */
 
     // Réponse de succès
     res.status(200).json({ 
@@ -88,23 +67,3 @@ export default async function handler(req, res) {
     });
   }
 }
-
-// Configuration pour différents services d'hébergement
-
-// Pour Netlify Functions :
-// Renommez ce fichier en `netlify/functions/contact.js`
-
-// Pour Vercel :
-// Ce fichier peut rester dans `api/contact.js`
-
-// Pour un serveur Express classique :
-/*
-const express = require('express');
-const router = express.Router();
-
-router.post('/contact', async (req, res) => {
-  // Code de la fonction handler ici
-});
-
-module.exports = router;
-*/

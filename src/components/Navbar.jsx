@@ -24,7 +24,7 @@ const Navbar = ({ isProjectModalOpen }) => {
 
 
   return (
-    <div className={`px-6 sm:px-[2rem] lg:px-[5rem] fixed bg-black/95 backdrop-blur-sm overflow-hidden top-0 w-[100%] z-40 transition-all duration-500 ${scrolled ? 'border-b' : 'border-0'} border-gray-800/50 ${isProjectModalOpen ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100 pointer-events-auto translate-y-0'}`}>
+    <div className={`px-6 sm:px-[2rem] lg:px-[5rem] fixed  backdrop-blur-sm overflow-hidden top-0 w-[100%] z-40 transition-all duration-500 ${scrolled ? 'border-b' : 'border-0'} border-gray-800/50 ${isProjectModalOpen ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100 pointer-events-auto translate-y-0'}`}>
       <div className={`flex flex-row justify-between items-center transition-all duration-300 ${scrolled ? 'py-[1rem]' : 'py-[3rem]'}`}>
         <a className='sm:text-2xl text-xl font-medium font-[roboto] tracking-wide sm:max-w-full text-center max-w-1 hidden sm:flex'>Ulysse COUCHOUD</a>
         <div className='sm:text-2xl text-xl font-medium font-[roboto] tracking-wide sm:max-w-full text-center max-w-1 sm:hidden'>Ulysse</div>
@@ -33,7 +33,9 @@ const Navbar = ({ isProjectModalOpen }) => {
             <a className='hover:text-purple-300 transition-colors cursor-pointer' href='#skills'>Compétences</a>
             <a className='hover:text-purple-300 transition-colors cursor-pointer' href='#projects'>Projets</a>
         </div>
-        <button className="btn btn-outline hover:bg-white hover:text-black">Me contacter</button>
+        <a href="#contact">
+          <button className="btn btn-outline hover:bg-white hover:text-black" >Me contacter</button>
+        </a>
       </div>
     </div>
   )

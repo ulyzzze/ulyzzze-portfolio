@@ -118,7 +118,7 @@ const Contact = () => {
       
       <div className="max-w-7xl mx-auto relative z-20">
         {/* En-tête de section */}
-        <div className='text-center mb-16'>
+        <div className='text-center mb-16' id="contact">
           <div className="inline-block relative">
             <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold bg-gradient-to-r from-blue-300 via-blue-200 to-purple-300 bg-clip-text text-transparent mb-4'>
               Contactez-moi
