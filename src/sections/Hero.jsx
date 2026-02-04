@@ -1,123 +1,132 @@
-import React, { useEffect } from 'react'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-import SceneInit from '../SceneInit'
+import React from 'react'
 import { ShimmerButton } from '../components/magicui/rainbow-button'
+import ColorBends from '../components/ColorBends'
+
+const CV_PDF_URL = '/CV_ULYSSE_COUCHOUD.pdf'
 
 const Hero = () => {
-  useEffect(() => {
-    const canvas = document.getElementById('myThreeJsCanvas')
-    if (!canvas) return
-
-    const scene = new SceneInit('myThreeJsCanvas')
-    scene.initialize()
-    scene.animate()
-
-    let loadedModel
-    const gltfLoader = new GLTFLoader()
-    gltfLoader.load(
-      '/models/space_boi/scene.gltf',
-      (gltfScene) => {
-        loadedModel = gltfScene
-        loadedModel.scene.scale.set(0.5, 0.5, 0.5)
-        loadedModel.scene.position.set(0, -1, -0.3)
-        scene.scene.add(gltfScene.scene)
-      },
-      undefined,
-      (error) => console.error('Error loading GLTF:', error)
-    )
-
-    const animate = () => {
-      if (loadedModel) loadedModel.scene.rotation.y -= 0.001
-      requestAnimationFrame(animate)
-    }
-    animate()
-
-    const handleResize = () => setTimeout(() => scene.onWindowResize(), 100)
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
   return (
     <section
       id="hero"
-      className="relative min-h-screen overflow-hidden flex flex-col justify-center"
+      className="relative min-h-screen overflow-hidden flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8"
     >
-      {/* Background: subtle grid + orbs */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      {/* Couche fond (derrière le contenu) */}
+      <div className="absolute inset-0 z-0">
+        <ColorBends
+          colors={["#ff5c7a", "#8a5cff", "#00ffd1"]}
+          rotation={0}
+          speed={0.2}
+          scale={1}
+          frequency={1}
+          warpStrength={1}
+          mouseInfluence={0}
+          parallax={0.5}
+          noise={0.1}
+          transparent
+          autoRotate={0}
+          color="white"
+        />
+      </div>
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px)
+              linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px)
             `,
-            backgroundSize: '64px 64px',
+            backgroundSize: '72px 72px',
           }}
         />
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-white/[0.03] rounded-full blur-[100px]" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-[140px]" />
+        <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-white/[0.03] rounded-full blur-[100px]" />
+        <div className="absolute bottom-1/3 left-0 w-[300px] h-[300px] bg-white/[0.02] rounded-full blur-[80px]" />
       </div>
 
-      {/* Optional decorative image - kept subtle */}
-      <div className="absolute top-0 left-0 z-0 sm:block hidden opacity-20">
-        <img src="/images/bg.png" alt="" aria-hidden />
-      </div>
+      {/* Contenu au premier plan */}
+      <header className="relative z-10 w-full max-w-4xl mx-auto text-center pt-24 pb-32">
 
-      <header className="relative z-10">
-        <div className="flex flex-col lg:flex-row pt-24 sm:pt-28 lg:pt-32 pb-20 sm:pb-24 px-4 sm:px-8 lg:px-16 xl:px-24 justify-between items-center lg:items-center gap-12 lg:gap-16">
-          {/* Left: copy */}
-          <div className="flex flex-col text-center lg:text-left max-w-2xl">
-            {/* Badge: spécialisation IA */}
-            <div className="inline-flex items-center gap-2 self-center lg:self-start px-3 py-1.5 rounded-full bg-white/5 border border-white/20 text-slate-300 text-sm font-medium tracking-wide mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white/80 opacity-60" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white/90" />
-              </span>
-              Spécialisation IA & Machine Learning
-            </div>
-
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight leading-[1.1]">
-              <span className="text-white">Ulysse Couchoud</span>
-              <br />
-              <span className="bg-gradient-to-r from-slate-300 via-white to-slate-400 bg-clip-text text-transparent">
-                Développeur & IA
-              </span>
-            </h1>
-
-            <p className="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-xl">
-              Développeur lyonnais, étudiant à Epitech Lyon. Je conçois des applications web
-              et des solutions orientées intelligence artificielle — de l’intégration de modèles
-              à l’automatisation des processus.
-            </p>
-
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-10">
-              <a href="#projects" className="inline-block">
-                <ShimmerButton className="border-white/30 hover:border-white/50 hover:bg-white/10">
-                  <span className="text-sm font-medium text-white lg:text-base">
-                    Voir mes projets
-                  </span>
-                </ShimmerButton>
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-white/20 text-white/90 text-sm font-medium hover:border-white/40 hover:bg-white/5 hover:text-white transition-all duration-300"
-              >
-                Me contacter
-              </a>
-            </div>
-          </div>
-
-          {/* Right: 3D scene */}
-          <div className="w-full max-w-xl lg:max-w-2xl h-[18rem] sm:h-[22rem] lg:h-[28rem] flex-shrink-0">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 bg-black/30 backdrop-blur-sm shadow-2xl shadow-black/20">
-              <canvas
-                id="myThreeJsCanvas"
-                className="w-full h-full block"
-                aria-label="Visualisation 3D"
-              />
-            </div>
-          </div>
+        {/* Badge */}
+        <div
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/30 border border-white/20 text-slate-200 text-sm font-medium tracking-wide mb-10 backdrop-blur-sm"
+          style={{ textShadow: '0 1px 2px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)' }}
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white/60 opacity-70" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-white/80" />
+          </span>
+          Spécialisation IA & Machine Learning
         </div>
+
+        {/* Title */}
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white tracking-tight leading-[1.05]"
+          style={{
+            textShadow: '0 0 30px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.7), 0 2px 4px rgba(0,0,0,0.9), 0 4px 12px rgba(0,0,0,0.6)',
+          }}
+        >
+          Ulysse Couchoud
+        </h1>
+        <p
+          className="mt-5 text-xl sm:text-2xl md:text-3xl text-slate-200 font-light tracking-tight"
+          style={{ textShadow: '0 0 20px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.5)' }}
+        >
+          Développeur fullstack & IA
+        </p>
+
+        {/* Divider */}
+        <div className="w-16 h-px bg-white/40 mx-auto mt-10 mb-10 drop-shadow-[0_0_8px_rgba(0,0,0,0.8)]" />
+
+        {/* Description */}
+        <p
+          className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed font-light"
+          style={{ textShadow: '0 0 16px rgba(0,0,0,0.7), 0 1px 2px rgba(0,0,0,0.8)' }}
+        >
+          Je conçois des applications web et des solutions orientées intelligence
+          artificielle — de l’intégration de modèles à l’automatisation des processus.
+        </p>
+
+        {/* CTAs */}
+        <div className="flex flex-wrap justify-center gap-4 mt-14">
+          <a href="#projects" className="inline-block">
+            <ShimmerButton className="border-white/40 hover:border-white/60 hover:bg-white/15 shadow-[0_0_20px_rgba(0,0,0,0.4)]">
+              <span className="text-sm font-medium text-white lg:text-base drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+                Voir mes projets
+              </span>
+            </ShimmerButton>
+          </a>
+          <a
+            href={CV_PDF_URL}
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white text-sm font-medium hover:border-white/50 hover:bg-white/10 transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.3)] [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Télécharger mon CV
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-white/30 text-white text-sm font-medium hover:border-white/50 hover:bg-white/10 transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.3)] [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]"
+          >
+            Me contacter
+          </a>
+        </div>
+
+        {/* Scroll indicator */}
+        <a
+          href="#experience"
+          className="inline-flex flex-col items-center gap-2 mt-20 text-slate-300 hover:text-white transition-colors"
+          style={{ textShadow: '0 0 12px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.8)' }}
+          aria-label="Défiler vers le bas"
+        >
+          <span className="text-xs font-medium tracking-widest uppercase">Découvrir</span>
+          <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </a>
       </header>
     </section>
   )
