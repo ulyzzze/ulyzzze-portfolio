@@ -67,7 +67,7 @@ const ThreeLogoScene = ({ modelPath, canvasId, text, x, y, z }) => {
             }, [modelPath, canvasId, x, y, z]); // Ajouter les dépendances
             
   return (
-    <div className='h-[26rem] w-[14rem] bg-black-100/80 backdrop-blur-sm rounded-2xl sm:rounded-[8rem] hover:bg-gradient-to-br hover:from-black-100 hover:to-black-200/50 hover:border hover:border-gray-600/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10'>
+    <div className='h-[26rem] w-[14rem] bg-black-100/80 backdrop-blur-sm rounded-2xl sm:rounded-[8rem] hover:bg-gradient-to-br hover:from-black-100 hover:to-black-200/50 hover:border hover:border-gray-600/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/5'>
         <div className='w-full max-w-2xl h-[19rem] mt-0'>
             <canvas id={canvasId} className='w-full h-full rounded-2xl sm:rounded-[8rem]' />
         </div>

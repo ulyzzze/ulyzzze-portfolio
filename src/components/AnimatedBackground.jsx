@@ -3,13 +3,13 @@ import React from 'react'
 const AnimatedBackground = () => {
   return (
     <div className="fixed inset-0 z-0 bg-gradient-to-br from-gray-950 via-black to-gray-950">
-      {/* Very subtle grid – thème IA */}
+      {/* Very subtle grid */}
       <div
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(6, 182, 212, 0.3) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(6, 182, 212, 0.3) 1px, transparent 1px)
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
           `,
           backgroundSize: '80px 80px',
         }}

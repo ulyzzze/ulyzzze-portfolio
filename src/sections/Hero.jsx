@@ -42,21 +42,20 @@ const Hero = () => {
       id="hero"
       className="relative min-h-screen overflow-hidden flex flex-col justify-center"
     >
-      {/* AI-themed background: subtle grid + gradient orbs */}
+      {/* Background: subtle grid + orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.15) 1px, transparent 1px)
+              linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px)
             `,
             backgroundSize: '64px 64px',
           }}
         />
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-violet-500/10 rounded-full blur-[100px]" />
-        <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-white/[0.03] rounded-full blur-[100px]" />
       </div>
 
       {/* Optional decorative image - kept subtle */}
@@ -69,10 +68,10 @@ const Hero = () => {
           {/* Left: copy */}
           <div className="flex flex-col text-center lg:text-left max-w-2xl">
             {/* Badge: spécialisation IA */}
-            <div className="inline-flex items-center gap-2 self-center lg:self-start px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-sm font-medium tracking-wide mb-6">
+            <div className="inline-flex items-center gap-2 self-center lg:self-start px-3 py-1.5 rounded-full bg-white/5 border border-white/20 text-slate-300 text-sm font-medium tracking-wide mb-6">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-60" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white/80 opacity-60" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-white/90" />
               </span>
               Spécialisation IA & Machine Learning
             </div>
@@ -80,7 +79,7 @@ const Hero = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight leading-[1.1]">
               <span className="text-white">Ulysse Couchoud</span>
               <br />
-              <span className="bg-gradient-to-r from-cyan-300 via-white to-violet-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-slate-300 via-white to-slate-400 bg-clip-text text-transparent">
                 Développeur & IA
               </span>
             </h1>
@@ -93,7 +92,7 @@ const Hero = () => {
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-10">
               <a href="#projects" className="inline-block">
-                <ShimmerButton className="border-cyan-500/30 hover:border-cyan-400/50 hover:bg-cyan-500/10">
+                <ShimmerButton className="border-white/30 hover:border-white/50 hover:bg-white/10">
                   <span className="text-sm font-medium text-white lg:text-base">
                     Voir mes projets
                   </span>
@@ -110,7 +109,7 @@ const Hero = () => {
 
           {/* Right: 3D scene */}
           <div className="w-full max-w-xl lg:max-w-2xl h-[18rem] sm:h-[22rem] lg:h-[28rem] flex-shrink-0">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 bg-black/30 backdrop-blur-sm shadow-2xl shadow-cyan-500/5">
+            <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 bg-black/30 backdrop-blur-sm shadow-2xl shadow-black/20">
               <canvas
                 id="myThreeJsCanvas"
                 className="w-full h-full block"

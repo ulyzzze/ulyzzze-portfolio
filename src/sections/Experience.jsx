@@ -29,7 +29,7 @@ const experiences = [
       'Intégration d\'APIs externes (Apollo, Stripe) et mise en place du système de crédits et facturation.',
     ],
     tag: 'Startup · IA',
-    tagColor: 'from-cyan-500/20 to-violet-500/20 border-cyan-500/30 text-cyan-300',
+    tagColor: 'bg-white/10 border-white/20 text-slate-200',
   },
   {
     company: 'Technis',
@@ -43,7 +43,7 @@ const experiences = [
       'Conception de tableaux de bord et rapports Power BI à partir de données métier.',
     ],
     tag: 'Stage',
-    tagColor: 'from-slate-500/20 to-slate-600/20 border-slate-500/30 text-slate-300',
+    tagColor: 'bg-white/10 border-white/20 text-slate-200',
   },
   {
     company: 'HexaFret (ex-Fret SNCF)',
@@ -58,7 +58,7 @@ const experiences = [
       'Conception de tableaux de bord Power BI (données Excel et SharePoint).',
     ],
     tag: 'Stage',
-    tagColor: 'from-slate-500/20 to-slate-600/20 border-slate-500/30 text-slate-300',
+    tagColor: 'bg-white/10 border-white/20 text-slate-200',
     testimonial: {
       name: 'Oliver Berard',
       role: 'Dirigeant Atelier Production des Palomas SUD',
@@ -72,8 +72,8 @@ const Experience = () => {
   return (
     <section id="experience" className="relative py-24 px-4 pb-32 z-10">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-[100px]" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-violet-500/10 rounded-full blur-[100px]" />
+        <div className="absolute top-20 left-20 w-72 h-72 bg-white/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-white/[0.03] rounded-full blur-[100px]" />
       </div>
 
       <div className="relative z-20 max-w-4xl mx-auto">
@@ -81,7 +81,7 @@ const Experience = () => {
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
             Expérience professionnelle
           </h2>
-          <div className="w-24 h-0.5 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mx-auto mb-6" />
+          <div className="w-24 h-0.5 bg-white/40 rounded-full mx-auto mb-6" />
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             Parcours en développement, Power Platform et création de produit (IA)
           </p>
@@ -92,7 +92,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <article
               key={exp.company}
-              className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:border-cyan-500/20 transition-colors duration-300"
+              className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-colors duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                 <div className="flex items-start gap-4">
@@ -104,7 +104,7 @@ const Experience = () => {
                         {exp.tag}
                       </span>
                     </div>
-                    <p className="text-cyan-400 font-medium">{exp.role}</p>
+                    <p className="text-slate-300 font-medium">{exp.role}</p>
                     <p className="text-slate-500 text-sm mt-1">{exp.period}</p>
                   </div>
                 </div>
@@ -114,7 +114,7 @@ const Experience = () => {
               <ul className="space-y-2 text-slate-300 mb-0">
                 {exp.responsibilities.map((item, i) => (
                   <li key={i} className="flex gap-3">
-                    <span className="text-cyan-400 mt-0.5 flex-shrink-0">•</span>
+                    <span className="text-slate-300 mt-0.5 flex-shrink-0">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
