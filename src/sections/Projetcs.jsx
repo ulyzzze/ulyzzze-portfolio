@@ -219,23 +219,20 @@ Le projet met donc l’accent sur la programmation réseau, la gestion de la con
   };
 
   return (
-    <div id='projects' className='relative min-h-screen py-20 px-4 content-overlay'>
-      {/* Background decorative elements */}
+    <div id='projects' className='relative min-h-screen py-20 px-4'>
+      {/* Subtle background accents */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-32 right-20 w-80 h-80 bg-gradient-to-r from-purple-500/15 to-pink-500/15 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-32 left-20 w-96 h-96 bg-gradient-to-r from-blue-500/15 to-cyan-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-32 right-20 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 left-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className='relative z-10 max-w-7xl mx-auto'>
-        {/* Title with enhanced styling */}
+        {/* Title */}
         <div className='text-center mb-16'>
-          <div className="inline-block relative">
-            <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent mb-4'>
-              Projets
-            </h1>
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-          </div>
+          <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold text-white mb-4'>
+            Projets
+          </h1>
+          <div className="w-24 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-6"></div>
           <p className='text-gray-300 text-lg mt-6 max-w-2xl mx-auto'>
             Ceci est un regroupement de projets que j'ai pu réaliser lors de mes deux premières années à Epitech
           </p>
@@ -245,10 +242,7 @@ Le projet met donc l’accent sur la programmation réseau, la gestion de la con
         <div className='grid lg:grid-cols-2 xl:grid-cols-3 gap-8'>
           {projects.map((project, index) => (
             <div key={project.id} className="group">
-              <div className="card bg-gradient-to-br from-black-100/80 to-black-50/60 backdrop-blur-sm rounded-3xl border border-gray-800 hover:border-blue-500/50 transition-all duration-500 relative overflow-hidden h-full cursor-pointer" onClick={() => openProjectModal(project)}>
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-                
+              <div className="bg-black/40 backdrop-blur-sm rounded-xl border border-gray-800/50 hover:border-gray-700 transition-all duration-300 relative overflow-hidden h-full cursor-pointer" onClick={() => openProjectModal(project)}>
                 <div className="relative z-10 p-6 h-full flex flex-col">
                   {/* Status Badge */}
                   <div className="flex justify-between items-start mb-4">

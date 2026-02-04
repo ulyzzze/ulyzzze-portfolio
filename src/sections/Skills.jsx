@@ -33,24 +33,21 @@ const Skills = () => {
   ];
 
   return (
-    <div id='skills' className='relative min-h-screen py-20 px-4 z-10 content-overlay'>
-      {/* Background decorative elements */}
+    <div id='skills' className='relative min-h-screen py-20 px-4 z-10'>
+      {/* Subtle background accents */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-500/15 to-pink-500/15 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-blue-500/15 to-cyan-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
       </div>
 
       {/* Main content */}
       <div className='relative z-20 max-w-7xl mx-auto'>
-        {/* Title with enhanced styling */}
+        {/* Title */}
         <div className='text-center mb-16'>
-          <div className="inline-block relative">
-            <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent mb-4'>
-              Compétences
-            </h1>
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-          </div>
+          <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold text-white mb-4'>
+            Compétences
+          </h1>
+          <div className="w-24 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-6"></div>
           <p className='text-gray-300 text-lg mt-6 max-w-2xl mx-auto'>
             Voici un aperçu de mes compétences techniques et des technologies que je maîtrise
           </p>
@@ -92,36 +89,33 @@ const Skills = () => {
         {/* Skills Categories Section */}
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 mb-16'>
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="card bg-black-100/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-800 hover:border-gray-600 transition-all duration-300 group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-              <div className="relative z-10">
-                <h3 className='text-xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
-                  {category.title}
-                </h3>
+            <div key={categoryIndex} className="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-gray-800/50 hover:border-gray-700 transition-all duration-300">
+              <h3 className='text-xl font-bold mb-6 text-center text-white'>
+                {category.title}
+              </h3>
                 <div className='space-y-4'>
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="group/skill">
+                    <div key={skillIndex}>
                       <div className='flex justify-between items-center mb-2'>
-                        <span className='text-gray-200 font-medium group-hover/skill:text-white transition-colors'>
+                        <span className='text-gray-200 font-medium'>
                           {skill.name}
                         </span>
                         <span className='text-gray-400 text-sm'>
                           {skill.level}%
                         </span>
                       </div>
-                      <div className='h-2 bg-gray-700 rounded-full overflow-hidden'>
+                      <div className='h-2 bg-gray-800 rounded-full overflow-hidden'>
                         <div 
-                          className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-transform duration-1000 ease-out origin-left`}
+                          className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
                           style={{ 
-                            '--skill-level': skill.level / 100,
-                            animation: `skillBar 2s ease-out ${skillIndex * 0.2}s forwards`
+                            width: `${skill.level}%`,
+                            transitionDelay: `${skillIndex * 0.1}s`
                           }}
                         ></div>
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>
             </div>
           ))}
         </div>
@@ -132,32 +126,32 @@ const Skills = () => {
             Statistiques
           </h3>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
-            <div className='text-center group cursor-pointer'>
-              <div className='text-3xl md:text-4xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform'>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold text-blue-400 mb-2'>
                 15+
               </div>
               <div className='text-gray-300 text-sm'>
                 Technologies
               </div>
             </div>
-            <div className='text-center group cursor-pointer'>
-              <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform'>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>
                 30+
               </div>
               <div className='text-gray-300 text-sm'>
                 Projets
               </div>
             </div>
-            <div className='text-center group cursor-pointer'>
-              <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform'>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'>
                 2+
               </div>
               <div className='text-gray-300 text-sm'>
                 Années d'exp.
               </div>
             </div>
-            <div className='text-center group cursor-pointer'>
-              <div className='text-3xl md:text-4xl font-bold text-orange-400 mb-2 group-hover:scale-110 transition-transform'>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold text-orange-400 mb-2'>
                 24/7
               </div>
               <div className='text-gray-300 text-sm'>

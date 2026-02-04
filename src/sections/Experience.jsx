@@ -3,18 +3,17 @@ import React from 'react'
 const Experience = () => {
   return (
     
-    <div className='flex justify-center flex-col items-center pb-[10rem] content-overlay relative z-10'>
-        {/* Background decorative elements */}
+    <div className='flex justify-center flex-col items-center pb-[10rem] relative z-10'>
+        {/* Subtle background accents */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-orange-500/15 to-red-500/15 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-r from-indigo-500/15 to-purple-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-orange-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl"></div>
         </div>
         
-        <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-300 bg-clip-text text-transparent mb-4 text-center drop-shadow-lg' id='experience'>
+        <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold text-white mb-4 text-center' id='experience'>
             Expérience Professionnel.
         </h1>
-        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6"></div>
+        <div className="w-24 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6"></div>
         <p className='text-center text-gray-100 text-lg max-w-2xl mx-auto drop-shadow-md'>
             J'ai pu réaliser un stage lors de ma deuxième année chez HexaFret, anciennement connu sous FretSNCF
         </p>

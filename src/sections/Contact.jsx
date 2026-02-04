@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import SceneInit from '../SceneInit';
 import emailjs from '@emailjs/browser';
-import { SparklesText } from '../components/magicui/magic-text';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -108,23 +107,20 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen text-white py-20 px-4 content-overlay relative z-10">
-      {/* Background decorative elements */}
+    <section id="contact" className="min-h-screen text-white py-20 px-4 relative z-10">
+      {/* Subtle background accents */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-32 left-10 w-80 h-80 bg-gradient-to-r from-pink-500/15 to-rose-500/15 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-32 right-20 w-72 h-72 bg-gradient-to-r from-violet-500/15 to-purple-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-32 left-10 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 right-20 w-72 h-72 bg-violet-500/5 rounded-full blur-3xl"></div>
       </div>
       
       <div className="max-w-7xl mx-auto relative z-20">
         {/* En-tête de section */}
         <div className='text-center mb-16' id="contact">
-          <div className="inline-block relative">
-            <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold bg-gradient-to-r from-blue-300 via-blue-200 to-purple-300 bg-clip-text text-transparent mb-4'>
-              Contactez-moi
-            </h1>
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-          </div>
+          <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold text-white mb-4'>
+            Contactez-moi
+          </h1>
+          <div className="w-24 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-6"></div>
           <p className='text-gray-300 text-lg mt-6 max-w-2xl mx-auto'>
             Vous avez un projet en tête ? Une question ? N'hésitez pas à me contacter.
             Je serais ravi de discuter avec vous !
@@ -135,7 +131,7 @@ const Contact = () => {
         <div className="space-y-12">
           {/* Formulaire de contact avec scène 3D intégrée */}
           <div className="bg-gray-900/50 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-gray-800">
-            <SparklesText className={"text-2xl md:text-3xl font-semibold mb-8 text-purple-300 text-center"}>Envoyez-moi un message</SparklesText>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-white text-center">Envoyez-moi un message</h2>
             
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
               {/* Formulaire */}
