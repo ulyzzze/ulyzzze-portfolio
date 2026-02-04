@@ -1,73 +1,145 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+function CompanyLogo({ src, alt }) {
+  const [visible, setVisible] = useState(true)
+  if (!src) return null
+  if (!visible) return null
+  return (
+    <div className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 overflow-hidden p-2">
+      <img
+        src={src}
+        alt={alt}
+        className="w-full h-full object-contain"
+        onError={() => setVisible(false)}
+      />
+    </div>
+  )
+}
+
+const experiences = [
+  {
+    company: 'VibeCallin',
+    companyLogo: '/images/logos/vibecallin.jpeg',
+    role: 'Co-Founder',
+    period: 'Septembre 2025 – Aujourd\'hui',
+    description: 'Plateforme SaaS d\'outbound commercial piloté par l\'IA (recherche de leads, workflows automatisés, appels et emails).',
+    responsibilities: [
+      'Co-création du produit et de l\'architecture technique (FastAPI, Next.js, PostgreSQL).',
+      'Conception et développement des fonctionnalités IA (orchestration de workflows, génération de contenu).',
+      'Intégration d\'APIs externes (Apollo, Stripe) et mise en place du système de crédits et facturation.',
+    ],
+    tag: 'Startup · IA',
+    tagColor: 'from-cyan-500/20 to-violet-500/20 border-cyan-500/30 text-cyan-300',
+  },
+  {
+    company: 'Technis',
+    companyLogo: '/images/logos/technis.jpeg',
+    role: 'Stagiaire Développeur Power Platform',
+    period: 'Septembre 2025 – Février 2026',
+    description: 'Stage en entreprise sur la stack Microsoft Power Platform (Power Apps, Power Automate, Power BI).',
+    responsibilities: [
+      'Développement d\'applications métier sur Power Apps et interfaces optimisées.',
+      'Création et structuration de bases SharePoint et automatisation de processus (Power Automate).',
+      'Conception de tableaux de bord et rapports Power BI à partir de données métier.',
+    ],
+    tag: 'Stage',
+    tagColor: 'from-slate-500/20 to-slate-600/20 border-slate-500/30 text-slate-300',
+  },
+  {
+    company: 'HexaFret (ex-Fret SNCF)',
+    companyLogo: '/images/logos/hexafret.jpeg',
+    role: 'Développeur Power Platform',
+    period: 'Août 2024 – Décembre 2024',
+    description: 'Stage en deuxième année : application métier déployée au sein de Technifret.',
+    responsibilities: [
+      'Conception et développement d\'une application métier sur Power Apps.',
+      'Création de bases de données SharePoint liées à l\'application.',
+      'Optimisation de code Power Fx et développement de flux Power Automate.',
+      'Conception de tableaux de bord Power BI (données Excel et SharePoint).',
+    ],
+    tag: 'Stage',
+    tagColor: 'from-slate-500/20 to-slate-600/20 border-slate-500/30 text-slate-300',
+    testimonial: {
+      name: 'Oliver Berard',
+      role: 'Dirigeant Atelier Production des Palomas SUD',
+      avatar: '/images/tuteur.png',
+      quote: '"Excellent stage en entreprise. A su s\'intégrer rapidement dans l\'équipe. Professionnel, Ulysse a su prendre en compte rapidement les directives. Fonctionnelle et adaptée aux utilisateurs, il a su intégrer les remarques des agents. Notices d\'utilisation et de maintenance rédigées à l\'issue du stage. Application déployée au sein de Technifret. Stagiaire à recommander."',
+    },
+  },
+]
 
 const Experience = () => {
   return (
-    
-    <div className='flex justify-center flex-col items-center pb-[10rem] relative z-10'>
-        {/* Subtle background accents */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-orange-500/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl"></div>
+    <section id="experience" className="relative py-24 px-4 pb-32 z-10">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-violet-500/10 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="relative z-20 max-w-4xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            Expérience professionnelle
+          </h2>
+          <div className="w-24 h-0.5 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mx-auto mb-6" />
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            Parcours en développement, Power Platform et création de produit (IA)
+          </p>
         </div>
-        
-        <h1 className='lg:text-6xl md:text-5xl text-3xl font-bold text-white mb-4 text-center' id='experience'>
-            Expérience Professionnel.
-        </h1>
-        <div className="w-24 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6"></div>
-        <p className='text-center text-gray-100 text-lg max-w-2xl mx-auto drop-shadow-md'>
-            J'ai pu réaliser un stage lors de ma deuxième année chez HexaFret, anciennement connu sous FretSNCF
-        </p>
-        <div className='flex lg:flex-row flex-col justify-between gap-10 px-10 items-center lg:items-stretch pt-[5rem]'>
-            <div className='bg-black-50 md:w-[40rem] p-10 rounded-xl'>
-                <div className='flex flex-row items-center gap-5 pb-[1rem]'>
-                    <div className="avatar">
-                        <div className="w-12 rounded-full">
-                            <img src="/images/tuteur.png" />
-                        </div>
+
+        {/* Timeline */}
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
+            <article
+              key={exp.company}
+              className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:border-cyan-500/20 transition-colors duration-300"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                <div className="flex items-start gap-4">
+                  <CompanyLogo src={exp.companyLogo} alt={`Logo ${exp.company}`} />
+                  <div>
+                    <div className="flex flex-wrap items-center gap-3 mb-2">
+                      <h3 className="text-xl md:text-2xl font-bold text-white">{exp.company}</h3>
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium border bg-gradient-to-r ${exp.tagColor}`}>
+                        {exp.tag}
+                      </span>
                     </div>
-                    <div className='flex flex-col mr-4'>
-                        <h1 className='text-xl font-bold'>Oliver Berard</h1>
-                        <p className='text-thin text-gray-400'>Dirigeant Atelier Production des Palomas SUD</p>
-                    </div>
+                    <p className="text-cyan-400 font-medium">{exp.role}</p>
+                    <p className="text-slate-500 text-sm mt-1">{exp.period}</p>
+                  </div>
                 </div>
-                <p className='pb-[1rem]'>"Excellent stage en entreprise. A su s'intégrer rapidement dans l'équipe. Professionnel, Ulysse a su prendre en compte rapidement les directives. 
-                    <br/>Fonctionnelle et adaptée aux utilisateurs Ulysse a su prendre en compte les remarques des agents. Notices d'utilisation et de maintenance rédigées à l'issu du stage. Application déployée au sein de Technifret.
-                    Stagiaire à recommander."
-                </p>
-                <img src='/images/fret_sncf.png' className='w-[11rem]'/>
-            </div>
-            <div className='lg:flex flex-col justify-between items-center relative hidden'>
-                <div className='w-[0.2rem] bg-linear-to-b from-purple-500 to-yellow-500 h-full absolute left-1/2 transform -translate-x-1/2'></div>
-                <div className="avatar">
-                    <div className="w-16 rounded-full">
-                        <img src="/images/power_apps.png" className='bg-gray-600 p-2 border-4 border-gray-500 rounded-full'/>
+              </div>
+              <p className="text-slate-400 mb-6">{exp.description}</p>
+              <p className="text-slate-500 text-sm font-medium uppercase tracking-wider mb-3">Responsabilités</p>
+              <ul className="space-y-2 text-slate-300 mb-0">
+                {exp.responsibilities.map((item, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="text-cyan-400 mt-0.5 flex-shrink-0">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Témoignage (HexaFret uniquement) */}
+              {exp.testimonial && (
+                <div className="mt-8 pt-8 border-t border-white/10">
+                  <div className="flex flex-row items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/20">
+                      <img src={exp.testimonial.avatar} alt={exp.testimonial.name} className="w-full h-full object-cover" />
                     </div>
-                </div>
-                <div className="avatar">
-                    <div className="w-16 rounded-full">
-                        <img src="/images/power_automate.png" className='bg-gray-600 p-2 border-4 border-gray-500 rounded-full'/>
+                    <div>
+                      <p className="font-semibold text-white">{exp.testimonial.name}</p>
+                      <p className="text-sm text-slate-400">{exp.testimonial.role}</p>
                     </div>
+                  </div>
+                  <p className="text-slate-400 leading-relaxed italic mb-4">{exp.testimonial.quote}</p>
                 </div>
-                <div className="avatar">
-                    <div className="w-16 rounded-full">
-                        <img src="/images/power_bi.png" className='bg-gray-600 p-2 border-4 border-gray-500 rounded-full'/>
-                    </div>
-                </div>
-            </div>
-            <div className='flex flex-col gap-4'>
-                <h1 className='text-center font-bold text-2xl pb-[1rem]'>Développeur Power Platform</h1>
-                <p className='text-lg'>📅 Août 2024 - Décembre 2024</p>
-                <p className='font-thin italic'>Responsabilités</p>
-                <ul className='list-disc [&>li]:mb-3 text-lg'>
-                    <li>Conception et développement d’une application métier sur Power Apps avec interface optimisée.</li>
-                    <li>Création et structuration de bases de données SharePoint liées à l’application.</li>
-                    <li>Optimisation de code Power Fx déjà existant pour améliorer les performances et la maintenabilité.</li>
-                    <li>Développement de flux Power Automate pour automatiser certains processus.</li>
-                    <li>Conception de tableaux de bord Power BI à partir de données Excel et SharePoint.</li>
-                </ul>
-            </div>
+              )}
+            </article>
+          ))}
         </div>
-    </div>
+      </div>
+    </section>
   )
 }
 

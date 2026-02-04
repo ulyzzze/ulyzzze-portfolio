@@ -1,12 +1,22 @@
-import React from 'react';
+import React from 'react'
 
 const AnimatedBackground = () => {
   return (
-    <div className="fixed inset-0 z-0 bg-gradient-to-br from-gray-950 via-black to-gray-900">
-      {/* Subtle gradient overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+    <div className="fixed inset-0 z-0 bg-gradient-to-br from-gray-950 via-black to-gray-950">
+      {/* Very subtle grid – thème IA */}
+      <div
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(6, 182, 212, 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: '80px 80px',
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
     </div>
-  );
-};
+  )
+}
 
-export default AnimatedBackground;
+export default AnimatedBackground
